@@ -3,6 +3,8 @@ package com.eyeai.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -14,16 +16,19 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Controller
 public class HelloController {
-    //@ResponseBody
     @RequestMapping("/hello")
     public String hello() {
-        return "Hello World";
+        return "hello";
     }
 
     @RequestMapping("/")
     public String index(ModelMap map) {
-        map.addAttribute("host", "http:/wq.com");
         return "index";
+    }
+    
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+        return "login";
     }
     @RequestMapping(value = "/upload")
     public String upload() {
