@@ -1,5 +1,8 @@
 package com.eysai.test;
 
+import java.util.HashMap;
+import java.util.List;
+
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -25,6 +28,15 @@ public class json {
 	   JSONObject datas=JSON.parseObject(netjso.getString("data"));
 	   String mytoken=datas.getString("token");  
        System.out.println(mytoken);
+       
+       String json3="{\"image_id\": \"EB81MUR4RV+bXIkngv078Q==\", \"request_id\": \"1500890057,243910d1-bb8f-4686-b978-1d942ae01036\", \"time_used\": 332, \"faces\": [{\"face_rectangle\": {\"width\": 177, \"top\": 102, \"left\": 171, \"height\": 177}, \"face_token\": \"ddcbd9a6b1b3b26b9c42e9bf8496730c\"}]}";
+	   JSONObject faceDetecReturn=JSON.parseObject(json3);
+	   String faces=faceDetecReturn.getString("faces");
+       List<HashMap> list =JSON.parseArray(faces, HashMap.class);  
+
+	   System.out.println(list.get(0).get("face_token"));
+	   
+
 	}
 
 }
