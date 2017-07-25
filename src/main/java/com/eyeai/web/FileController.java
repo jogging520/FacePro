@@ -12,6 +12,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,53 +20,31 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import com.eyeai.service.FileuploadService;
+
 @Controller
 public class FileController {
 	@RequestMapping(value = "/oneUploadFile", method = RequestMethod.POST)
 	  public String oneUploadFile(HttpServletRequest req, MultipartHttpServletRequest multiReq) {
-	    // 获取上传文件的路径
+	    
+		FileuploadService fileservice;
+		// 获取上传文件的路径
 	    String uploadFilePath = multiReq.getFile("file1").getOriginalFilename();
 	    // 截取上传文件的文件名
-	    String uploadFileName =getFilename(uploadFilePath);
+	    String uploadFileName =fileservice.getFilename(uploadFilePath);
 	    // 截取上传文件的后缀
-	    String uploadFileSuffix = getFileSuffix(uploadFilePath);
+	    String uploadFileSuffix = fileservice.getFileSuffix(uploadFilePath);
 	    
-	    FileOutputStream fos = null;
+	    
 	    FileInputStream fis = null;
-	    try {
-	      fis = (FileInputStream) multiReq.getFile("file1").getInputStream();
-//	      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
-//	          + "new"+".")
-//	          + uploadFileSuffix);
-	      fos = new FileOutputStream(new File("E:/images/"+uploadFileName+"new."+uploadFileSuffix));
-	      byte[] temp = new byte[1024];
-	      int i = fis.read(temp);
-	      while (i != -1){
-	        fos.write(temp,0,temp.length);
-	        fos.flush();
-	        i = fis.read(temp);
-	      }
-	    } catch (IOException e) {
-	      e.printStackTrace();
-	    } finally {
-	      if (fis != null) {
-	        try {
-	          fis.close();
-	        } catch (IOException e) {
-	          e.printStackTrace();
-	        }
-	      }
-	      if (fos != null) {
-	        try {
-	          fos.close();
-	        } catch (IOException e) {
-	          e.printStackTrace();
-	        }
-	      }
-	    }
+
+	    fis = (FileInputStream) multiReq.getFile("file1").getInputStream();
+	      
+	    fileservice.upload(uploadFileName, uploadFileSuffix, fis);
+
 	    
 	    return "sucess";
-	  }
+ }
 
 	  @RequestMapping(value = "testUploadFiles", method = RequestMethod.POST)
 	  public String mutUploadFiles(HttpServletRequest request) {
