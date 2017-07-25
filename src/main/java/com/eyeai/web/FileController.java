@@ -23,46 +23,46 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 public class FileController {
 	@RequestMapping(value = "/oneUploadFile", method = RequestMethod.POST)
 	  public String oneUploadFile(HttpServletRequest req, MultipartHttpServletRequest multiReq) {
-//	    // 获取上传文件的路径
-//	    String uploadFilePath = multiReq.getFile("file1").getOriginalFilename();
-//	    // 截取上传文件的文件名
-//	    String uploadFileName =getFilename(uploadFilePath);
-//	    // 截取上传文件的后缀
-//	    String uploadFileSuffix = getFileSuffix(uploadFilePath);
-//	    
-//	    FileOutputStream fos = null;
-//	    FileInputStream fis = null;
-//	    try {
-//	      fis = (FileInputStream) multiReq.getFile("file1").getInputStream();
-////	      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
-////	          + "new"+".")
-////	          + uploadFileSuffix);
-//	      fos = new FileOutputStream(new File("E:/images/"+uploadFileName+"new."+uploadFileSuffix));
-//	      byte[] temp = new byte[1024];
-//	      int i = fis.read(temp);
-//	      while (i != -1){
-//	        fos.write(temp,0,temp.length);
-//	        fos.flush();
-//	        i = fis.read(temp);
-//	      }
-//	    } catch (IOException e) {
-//	      e.printStackTrace();
-//	    } finally {
-//	      if (fis != null) {
-//	        try {
-//	          fis.close();
-//	        } catch (IOException e) {
-//	          e.printStackTrace();
-//	        }
-//	      }
-//	      if (fos != null) {
-//	        try {
-//	          fos.close();
-//	        } catch (IOException e) {
-//	          e.printStackTrace();
-//	        }
-//	      }
-//	    }
+	    // 获取上传文件的路径
+	    String uploadFilePath = multiReq.getFile("file1").getOriginalFilename();
+	    // 截取上传文件的文件名
+	    String uploadFileName =getFilename(uploadFilePath);
+	    // 截取上传文件的后缀
+	    String uploadFileSuffix = getFileSuffix(uploadFilePath);
+	    
+	    FileOutputStream fos = null;
+	    FileInputStream fis = null;
+	    try {
+	      fis = (FileInputStream) multiReq.getFile("file1").getInputStream();
+//	      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
+//	          + "new"+".")
+//	          + uploadFileSuffix);
+	      fos = new FileOutputStream(new File("E:/images/"+uploadFileName+"new."+uploadFileSuffix));
+	      byte[] temp = new byte[1024];
+	      int i = fis.read(temp);
+	      while (i != -1){
+	        fos.write(temp,0,temp.length);
+	        fos.flush();
+	        i = fis.read(temp);
+	      }
+	    } catch (IOException e) {
+	      e.printStackTrace();
+	    } finally {
+	      if (fis != null) {
+	        try {
+	          fis.close();
+	        } catch (IOException e) {
+	          e.printStackTrace();
+	        }
+	      }
+	      if (fos != null) {
+	        try {
+	          fos.close();
+	        } catch (IOException e) {
+	          e.printStackTrace();
+	        }
+	      }
+	    }
 	    
 	    return "sucess";
 	  }
