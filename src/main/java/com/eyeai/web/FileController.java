@@ -21,57 +21,54 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 @Controller
 public class FileController {
-	@RequestMapping(value = "/testUploadFile", method = RequestMethod.POST)
-	  public void testUploadFile(HttpServletRequest req,
-	      MultipartHttpServletRequest multiReq) {
-	    // 获取上传文件的路径
-	    String uploadFilePath = multiReq.getFile("file1").getOriginalFilename();
-	    System.out.println("uploadFlePath:" + uploadFilePath);
-	    // 截取上传文件的文件名
-	    String uploadFileName = uploadFilePath.substring(
-	        uploadFilePath.lastIndexOf('/') + 1, uploadFilePath.indexOf('.'));
-	    System.out.println("multiReq.getFile()" + uploadFileName);
-	    // 截取上传文件的后缀
-	    String uploadFileSuffix = uploadFilePath.substring(
-	        uploadFilePath.indexOf('.') + 1, uploadFilePath.length());
-	    System.out.println("uploadFileSuffix:" + uploadFileSuffix);
-	    FileOutputStream fos = null;
-	    FileInputStream fis = null;
-	    try {
-	      fis = (FileInputStream) multiReq.getFile("file1").getInputStream();
-	      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
-	          + "new"+".")
-	          + uploadFileSuffix);
-	      byte[] temp = new byte[1024];
-	      int i = fis.read(temp);
-	      while (i != -1){
-	        fos.write(temp,0,temp.length);
-	        fos.flush();
-	        i = fis.read(temp);
-	      }
-	    } catch (IOException e) {
-	      e.printStackTrace();
-	    } finally {
-	      if (fis != null) {
-	        try {
-	          fis.close();
-	        } catch (IOException e) {
-	          e.printStackTrace();
-	        }
-	      }
-	      if (fos != null) {
-	        try {
-	          fos.close();
-	        } catch (IOException e) {
-	          e.printStackTrace();
-	        }
-	      }
-	    }
+	@RequestMapping(value = "/oneUploadFile", method = RequestMethod.POST)
+	  public String oneUploadFile(HttpServletRequest req, MultipartHttpServletRequest multiReq) {
+//	    // 获取上传文件的路径
+//	    String uploadFilePath = multiReq.getFile("file1").getOriginalFilename();
+//	    // 截取上传文件的文件名
+//	    String uploadFileName =getFilename(uploadFilePath);
+//	    // 截取上传文件的后缀
+//	    String uploadFileSuffix = getFileSuffix(uploadFilePath);
+//	    
+//	    FileOutputStream fos = null;
+//	    FileInputStream fis = null;
+//	    try {
+//	      fis = (FileInputStream) multiReq.getFile("file1").getInputStream();
+////	      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
+////	          + "new"+".")
+////	          + uploadFileSuffix);
+//	      fos = new FileOutputStream(new File("E:/images/"+uploadFileName+"new."+uploadFileSuffix));
+//	      byte[] temp = new byte[1024];
+//	      int i = fis.read(temp);
+//	      while (i != -1){
+//	        fos.write(temp,0,temp.length);
+//	        fos.flush();
+//	        i = fis.read(temp);
+//	      }
+//	    } catch (IOException e) {
+//	      e.printStackTrace();
+//	    } finally {
+//	      if (fis != null) {
+//	        try {
+//	          fis.close();
+//	        } catch (IOException e) {
+//	          e.printStackTrace();
+//	        }
+//	      }
+//	      if (fos != null) {
+//	        try {
+//	          fos.close();
+//	        } catch (IOException e) {
+//	          e.printStackTrace();
+//	        }
+//	      }
+//	    }
+	    
+	    return "sucess";
 	  }
 
-	@RequestMapping(value = "testUploadFiles", method = RequestMethod.POST)
-	  @ResponseBody
-	  public void handleFileUpload(HttpServletRequest request) {
+	  @RequestMapping(value = "testUploadFiles", method = RequestMethod.POST)
+	  public String mutUploadFiles(HttpServletRequest request) {
 	    List<MultipartFile> files = ((MultipartHttpServletRequest) request)
 	        .getFiles("file");
 	    MultipartFile file = null;
@@ -83,16 +80,11 @@ public class FileController {
 	          String uploadFilePath = file.getOriginalFilename();
 	          System.out.println("uploadFlePath:" + uploadFilePath);
 	          // 截取上传文件的文件名
-	          String uploadFileName = uploadFilePath
-	              .substring(uploadFilePath.lastIndexOf('/') + 1,
-	                  uploadFilePath.indexOf('.'));
-	          System.out.println("multiReq.getFile()" + uploadFileName);
+	          String uploadFileName = getFilename(uploadFilePath);
 	          // 截取上传文件的后缀
-	          String uploadFileSuffix = uploadFilePath.substring(
-	              uploadFilePath.indexOf('.') + 1, uploadFilePath.length());
-	          System.out.println("uploadFileSuffix:" + uploadFileSuffix);
+	          String uploadFileSuffix = getFileSuffix(uploadFilePath);
 	          stream = new BufferedOutputStream(new FileOutputStream(new File(
-	              ".//uploadFiles//" + uploadFileName + "." + uploadFileSuffix)));
+	              ".//uploadFiles//" + uploadFileName + "new." + uploadFileSuffix)));
 	          byte[] bytes = file.getBytes();
 	          stream.write(bytes,0,bytes.length);
 	        } catch (Exception e) {
@@ -111,6 +103,8 @@ public class FileController {
 	      }
 	    }
 	    System.out.println("文件接受成功了");
+	    
+	    return "sucess";
 	  }
 	@RequestMapping(value = "/testDownload", method = RequestMethod.GET)
 	  public void testDownload(HttpServletResponse res) {
@@ -145,4 +139,23 @@ public class FileController {
 	    System.out.println("success");
 	  }
 	
+	  public String getFilename(String uploadFilePath){
+
+	  System.out.println("uploadFlePath:" + uploadFilePath);
+	    
+	    // 1.截取上传文件的文件名
+	    String uploadFileName = uploadFilePath.substring(
+	        uploadFilePath.lastIndexOf('/') + 1, uploadFilePath.indexOf('.'));
+	    System.out.println("multiReq.getFile()" + uploadFileName);
+	    // 2.截取上传文件的后缀
+
+	    return uploadFileName;    
+	}
+	  public String getFileSuffix(String uploadFilePath){
+	    String uploadFileSuffix = uploadFilePath.substring(
+		        uploadFilePath.indexOf('.') + 1, uploadFilePath.length());
+		System.out.println("uploadFileSuffix:" + uploadFileSuffix);
+		
+		return uploadFileSuffix;
+	}
 }
