@@ -24,117 +24,70 @@ import com.eyeai.service.FileuploadService;
 
 @Controller
 public class FileController {
-	@RequestMapping(value = "/oneUploadFile", method = RequestMethod.POST)
-	  public String oneUploadFile(HttpServletRequest req, MultipartHttpServletRequest multiReq) {
-	    
-		FileuploadService fileservice;
-		// 获取上传文件的路径
-	    String uploadFilePath = multiReq.getFile("file1").getOriginalFilename();
-	    // 截取上传文件的文件名
-	    String uploadFileName =fileservice.getFilename(uploadFilePath);
-	    // 截取上传文件的后缀
-	    String uploadFileSuffix = fileservice.getFileSuffix(uploadFilePath);
-	    
-	    
-	    FileInputStream fis = null;
-
-	    fis = (FileInputStream) multiReq.getFile("file1").getInputStream();
-	      
-	    fileservice.upload(uploadFileName, uploadFileSuffix, fis);
-
-	    
-	    return "sucess";
- }
-
-	  @RequestMapping(value = "testUploadFiles", method = RequestMethod.POST)
-	  public String mutUploadFiles(HttpServletRequest request) {
-	    List<MultipartFile> files = ((MultipartHttpServletRequest) request)
-	        .getFiles("file");
-	    MultipartFile file = null;
-	    BufferedOutputStream stream = null;
-	    for (int i = 0; i < files.size(); ++i) {
-	      file = files.get(i);
-	      if (!file.isEmpty()) {
-	        try {
-	          String uploadFilePath = file.getOriginalFilename();
-	          System.out.println("uploadFlePath:" + uploadFilePath);
-	          // 截取上传文件的文件名
-	          String uploadFileName = getFilename(uploadFilePath);
-	          // 截取上传文件的后缀
-	          String uploadFileSuffix = getFileSuffix(uploadFilePath);
-	          stream = new BufferedOutputStream(new FileOutputStream(new File(
-	              ".//uploadFiles//" + uploadFileName + "new." + uploadFileSuffix)));
-	          byte[] bytes = file.getBytes();
-	          stream.write(bytes,0,bytes.length);
-	        } catch (Exception e) {
-	          e.printStackTrace();
-	        } finally {
-	          try {
-	            if (stream != null) {
-	              stream.close();
-	            }
-	          } catch (IOException e) {
-	            e.printStackTrace();
-	          }
-	        }
-	      } else {
-	        System.out.println("上传文件为空");
-	      }
-	    }
-	    System.out.println("文件接受成功了");
-	    
-	    return "sucess";
-	  }
-	@RequestMapping(value = "/testDownload", method = RequestMethod.GET)
-	  public void testDownload(HttpServletResponse res) {
-	    String fileName = "upload.jpg";
-	    res.setHeader("content-type", "application/octet-stream");
-	    res.setContentType("application/octet-stream");
-	    res.setHeader("Content-Disposition", "attachment;filename=" + fileName);
-	    byte[] buff = new byte[1024];
-	    BufferedInputStream bis = null;
-	    OutputStream os = null;
-	    try {
-	      os = res.getOutputStream();
-	      bis = new BufferedInputStream(new FileInputStream(new File("d://"
-	          + fileName)));
-	      int i = bis.read(buff);
-	      while (i != -1) {
-	        os.write(buff, 0, buff.length);
-	        os.flush();
-	        i = bis.read(buff);
-	      }
-	    } catch (IOException e) {
-	      e.printStackTrace();
-	    } finally {
-	      if (bis != null) {
-	        try {
-	          bis.close();
-	        } catch (IOException e) {
-	          e.printStackTrace();
-	        }
-	      }
-	    }
-	    System.out.println("success");
-	  }
 	
-	  public String getFilename(String uploadFilePath){
+	@Autowired
+	 private FileuploadService fileservice;
+	
+	@RequestMapping(value = "/oneUploadFile", method = RequestMethod.POST)
+     public String oneUploadFile(HttpServletRequest req, MultipartHttpServletRequest multiReq) throws IOException {
 
-	  System.out.println("uploadFlePath:" + uploadFilePath);
+	      
+	    fileservice.upload(req,multiReq);
+
+	    return "sucess";
+     }
+
+	  @RequestMapping(value = "/mutiUploadFiles", method = RequestMethod.POST)
+	  public String mutUploadFiles(HttpServletRequest req) throws IOException {
 	    
-	    // 1.截取上传文件的文件名
-	    String uploadFileName = uploadFilePath.substring(
-	        uploadFilePath.lastIndexOf('/') + 1, uploadFilePath.indexOf('.'));
-	    System.out.println("multiReq.getFile()" + uploadFileName);
-	    // 2.截取上传文件的后缀
+		fileservice.mutiupload(req);
+		  
+	    return "sucess";
+	  }
+//	@RequestMapping(value = "/testDownload", method = RequestMethod.GET)
+//	  public void testDownload(HttpServletResponse res) {
+//	    String fileName = "upload.jpg";
+//	    res.setHeader("content-type", "application/octet-stream");
+//	    res.setContentType("application/octet-stream");
+//	    res.setHeader("Content-Disposition", "attachment;filename=" + fileName);
+//	    byte[] buff = new byte[1024];
+//	    BufferedInputStream bis = null;
+//	    OutputStream os = null;
+//	    try {
+//	      os = res.getOutputStream();
+//	      bis = new BufferedInputStream(new FileInputStream(new File("d://"
+//	          + fileName)));
+//	      int i = bis.read(buff);
+//	      while (i != -1) {
+//	        os.write(buff, 0, buff.length);
+//	        os.flush();
+//	        i = bis.read(buff);
+//	      }
+//	    } catch (IOException e) {
+//	      e.printStackTrace();
+//	    } finally {
+//	      if (bis != null) {
+//	        try {
+//	          bis.close();
+//	        } catch (IOException e) {
+//	          e.printStackTrace();
+//	        }
+//	      }
+//	    }
+//	    System.out.println("success");
+//	  }
+//	
+//	  public String getFilename(String uploadFilePath){
+//
+//	  System.out.println("uploadFlePath:" + uploadFilePath);
+//	    
+//	    // 1.截取上传文件的文件名
+//	    String uploadFileName = uploadFilePath.substring(
+//	        uploadFilePath.lastIndexOf('/') + 1, uploadFilePath.indexOf('.'));
+//	    System.out.println("multiReq.getFile()" + uploadFileName);
+//	    // 2.截取上传文件的后缀
+//
+//	    return uploadFileName;    
+//	}
 
-	    return uploadFileName;    
-	}
-	  public String getFileSuffix(String uploadFilePath){
-	    String uploadFileSuffix = uploadFilePath.substring(
-		        uploadFilePath.indexOf('.') + 1, uploadFilePath.length());
-		System.out.println("uploadFileSuffix:" + uploadFileSuffix);
-		
-		return uploadFileSuffix;
-	}
 }
