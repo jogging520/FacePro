@@ -114,6 +114,10 @@ public class FaceDetectUtil {
         return null;
     }
 
+    public String faceDetectapi(byte[]imagebuffer,String url,Map<String,String> map){
+    	
+    	return null;
+    }
     public static void main(String[] args) throws Exception{
   
         //File file = new File("/Users/qiwu/Downloads/baby.JPG"); 
@@ -122,22 +126,36 @@ public class FaceDetectUtil {
     	 * {"image_id": "EB81MUR4RV+bXIkngv078Q==", "request_id": "1500890057,243910d1-bb8f-4686-b978-1d942ae01036", "time_used": 332, "faces": [{"face_rectangle": {"width": 177, "top": 102, "left": 171, "height": 177}, "face_token": "ddcbd9a6b1b3b26b9c42e9bf8496730c"}]}
 
     	 */
-    	File file = new File("E:/images/test2.bmp"); 
+    	File file = new File("E:/images/testimage.jpg"); 
     	//System.out.println("dfdfdfdf");
         byte[] buff = getBytesFromFile(file);
-        String url = "https://api-cn.faceplusplus.com/facepp/v3/detect";
+        String urldetect = "https://api-cn.faceplusplus.com/facepp/v3/detect";
         HashMap<String, String> map = new HashMap<>();
         HashMap<String, byte[]> byteMap = new HashMap<>();
         map.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
         map.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
         byteMap.put("image_file", buff);
         try{
-            byte[] bacd = post(url, map, byteMap);
+            byte[] bacd = post(urldetect, map, byteMap);
             String str = new String(bacd);
             System.out.println(str);
         }catch (Exception e) {
          e.printStackTrace();
         }
    }
-  
+  ///////////////////////////////////////////////
+//       String urlCompare = "https://api-cn.faceplusplus.com/facepp/v3/compare";
+//       HashMap<String, byte[]> byteMap = new HashMap<>();
+//	   HashMap<String, String> map = new HashMap<>();
+//       map.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
+//       map.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
+//       try{
+//           byte[] bacd = post(urldetect, map, byteMap);
+//           String str = new String(bacd);
+//           System.out.println(str);
+//       }catch (Exception e) {
+//        e.printStackTrace();
+//       }
+//  
+//    }	
 }
