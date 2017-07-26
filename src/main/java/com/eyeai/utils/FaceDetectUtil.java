@@ -114,10 +114,7 @@ public class FaceDetectUtil {
         return null;
     }
 
-    public String faceDetectapi(byte[]imagebuffer,String url,Map<String,String> map){
-    	
-    	return null;
-    }
+
     public static void main(String[] args) throws Exception{
   
         //File file = new File("/Users/qiwu/Downloads/baby.JPG"); 

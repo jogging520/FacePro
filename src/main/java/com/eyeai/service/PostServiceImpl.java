@@ -46,8 +46,7 @@ public class PostServiceImpl implements PostService {
             String key = entry.getKey();
             String value = entry.getValue();
             obos.writeBytes("--" + getBoundary() + "\r\n");
-            obos.writeBytes("Content-Disposition: form-data; name=\"" + key
-                    + "\"\r\n");
+            obos.writeBytes("Content-Disposition: form-data; name=\"" + key + "\"\r\n");
             obos.writeBytes("\r\n");
             obos.writeBytes(value + "\r\n");
         }
@@ -90,7 +89,6 @@ public class PostServiceImpl implements PostService {
         System.out.println(response);
         ins.close();
         return response;
-		
 	}
 
 	@Override

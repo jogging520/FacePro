@@ -1,39 +1,43 @@
 package com.eyeai.web;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.util.List;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.eyeai.service.FileuploadService;
+import com.eyeai.service.PostService;
 
 @Controller
 public class FileController {
 	
 	@Autowired
 	 private FileuploadService fileservice;
-	
+	@Autowired
+	 private PostService postService;
 	@RequestMapping(value = "/oneUploadFile", method = RequestMethod.POST)
      public String oneUploadFile(HttpServletRequest req, MultipartHttpServletRequest multiReq) throws IOException {
 
 	      
 	    fileservice.upload(req,multiReq);
-
+	    String URL = "https://api-cn.faceplusplus.com/facepp/v3/detect";
+        HashMap<String, String> map = new HashMap<>();
+        HashMap<String, byte[]> byteMap = new HashMap<>();
+        map.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
+        map.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
+        File file = new File("/Users/qiwu/Downloads/baby.JPG");
+		byte[] buff = getBytesFromFile(file);
+		byteMap.put("image_file", buff);
+        postService.postImage(URL, map, byteMap);
 	    return "sucess";
      }
 
@@ -44,6 +48,25 @@ public class FileController {
 		  
 	    return "sucess";
 	  }
+	  
+	  public static byte[] getBytesFromFile(File f) {
+	        if (f == null) {
+	            return null;
+	        }
+	        try {
+	            FileInputStream stream = new FileInputStream(f);
+	            ByteArrayOutputStream out = new ByteArrayOutputStream(1000);
+	            byte[] b = new byte[1000];
+	            int n;
+	            while ((n = stream.read(b)) != -1)
+	                out.write(b, 0, n);
+	            stream.close();
+	            out.close();
+	            return out.toByteArray();
+	        } catch (IOException e) {
+	        }
+	        return null;
+	    }
 //	@RequestMapping(value = "/testDownload", method = RequestMethod.GET)
 //	  public void testDownload(HttpServletResponse res) {
 //	    String fileName = "upload.jpg";

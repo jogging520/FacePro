@@ -75,10 +75,10 @@ public class FileuploadService {
 
     public void transferFile( FileInputStream  fis, String uploadFileName, String uploadFileSuffix){
     	try {
-    		//      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
-    		//          + "new"+".")
-    		//          + uploadFileSuffix);
-    		   FileOutputStream fos = new FileOutputStream(new File("E:/images/"+uploadFileName+"new."+uploadFileSuffix));
+    		      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
+    		          + "new"+".")
+    		          + uploadFileSuffix);
+    		   //FileOutputStream fos = new FileOutputStream(new File("E:/images/"+uploadFileName+"new."+uploadFileSuffix));
     		   byte[] temp = new byte[1024];
     		   int i = fis.read(temp);
     		   while (i != -1){
