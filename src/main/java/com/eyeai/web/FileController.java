@@ -30,14 +30,14 @@ public class FileController {
 	      
 	    fileservice.upload(req,multiReq);
 	    String URL = "https://api-cn.faceplusplus.com/facepp/v3/detect";
-        HashMap<String, String> map = new HashMap<>();
-        HashMap<String, byte[]> byteMap = new HashMap<>();
-        map.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
-        map.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
-        File file = new File("/Users/qiwu/Downloads/baby.JPG");
+      HashMap<String, String> map = new HashMap<>();
+      HashMap<String, byte[]> byteMap = new HashMap<>();
+      map.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
+      map.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
+      File file = new File("E:/images/testimage.jpg"); 
 		byte[] buff = getBytesFromFile(file);
 		byteMap.put("image_file", buff);
-        postService.postImage(URL, map, byteMap);
+      postService.postImage(URL, map, byteMap);
 	    return "sucess";
      }
 
