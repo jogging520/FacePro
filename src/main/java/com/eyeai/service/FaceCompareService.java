@@ -1,6 +1,11 @@
 package com.eyeai.service;
 
-public interface FaceCompareService {
+import javax.servlet.http.HttpServletRequest;
 
-	  String facecompare();
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+public interface FaceCompareService {
+	
+ 
+	  String facecompare(HttpServletRequest req, MultipartHttpServletRequest multiReq);
 }

@@ -123,7 +123,7 @@ public class FaceDetectUtil {
     	 * {"image_id": "EB81MUR4RV+bXIkngv078Q==", "request_id": "1500890057,243910d1-bb8f-4686-b978-1d942ae01036", "time_used": 332, "faces": [{"face_rectangle": {"width": 177, "top": 102, "left": 171, "height": 177}, "face_token": "ddcbd9a6b1b3b26b9c42e9bf8496730c"}]}
 
     	 */
-    	File file = new File("E:/images/testimage.jpg"); 
+    	File file = new File("E:/images/2317710523_eyeai.jpg"); 
     	//System.out.println("dfdfdfdf");
         byte[] buff = getBytesFromFile(file);
         String urldetect = "https://api-cn.faceplusplus.com/facepp/v3/detect";

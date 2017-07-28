@@ -16,10 +16,10 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 @Service
 public class FileuploadServiceImpl implements FileuploadService {
     FileOutputStream fos = null;
-    @Override
-    public void upload(HttpServletRequest req, MultipartHttpServletRequest multiReq ) throws IOException{
-    	
-		// 获取上传文件的路径
+    
+	@Override
+	public String upload(HttpServletRequest req, MultipartHttpServletRequest multiReq) throws IOException {
+//		// TODO Auto-generated method stub
 	    String uploadFilePath = multiReq.getFile("file1").getOriginalFilename();
 	    // 截取上传文件的文件名
 	    String uploadFileName = getFilename(uploadFilePath);
@@ -27,13 +27,17 @@ public class FileuploadServiceImpl implements FileuploadService {
 	    String uploadFileSuffix =getFileSuffix(uploadFilePath);
 	    // 获取上传文件的输入流
 	    FileInputStream fis = (FileInputStream)multiReq.getFile("file1").getInputStream();
-		
+	    String imageStore ="E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix;
 	    if (fis!=null) {
-    	    transferFile(fis,uploadFileName,uploadFileSuffix);
+    	    transferFile(fis,uploadFileName,uploadFileSuffix,imageStore);
+    	    return imageStore;
       } else {
         System.out.println("上传文件为空");
       }
-    }
+	
+		return null;
+	}
+
     @Override
     public void mutiupload(HttpServletRequest req) throws IOException{
     	List<MultipartFile> files = ((MultipartHttpServletRequest) req).getFiles("file");
@@ -51,8 +55,9 @@ public class FileuploadServiceImpl implements FileuploadService {
 		    String uploadFileSuffix =getFileSuffix(uploadFilePath);
 		    // 获取上传文件的输入流
 		    FileInputStream fis = (FileInputStream) file.getInputStream();
+		    String imageStore ="E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix;
 	        if (!file.isEmpty()) {
-	    	    transferFile(fis,uploadFileName,uploadFileSuffix);
+	    	    transferFile(fis,uploadFileName,uploadFileSuffix,imageStore);
 	      } else {
 	        System.out.println("上传文件为空");
 	      }
@@ -78,12 +83,13 @@ public class FileuploadServiceImpl implements FileuploadService {
   		return uploadFileSuffix;
   	}
 
-    public void transferFile( FileInputStream  fis, String uploadFileName, String uploadFileSuffix){
+    public void transferFile( FileInputStream  fis, String uploadFileName, String uploadFileSuffix,String imageStore){
     	try {
 //    		      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
 //    		          + "new"+".")
 //    		          + uploadFileSuffix);
-    		   FileOutputStream fos = new FileOutputStream(new File("E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix));
+    		 
+    		   FileOutputStream fos = new FileOutputStream(new File(imageStore));
     		   byte[] temp = new byte[1024];
     		   int i = fis.read(temp);
     		   while (i != -1){
@@ -110,5 +116,5 @@ public class FileuploadServiceImpl implements FileuploadService {
     		        }
     		      }
     		    }
-    }
+         }
 }

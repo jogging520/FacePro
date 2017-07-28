@@ -98,8 +98,8 @@ public class HttpPostUtils {
     	String url ="https://api-cn.faceplusplus.com/facepp/v3/compare";
         json.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
         json.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
-    	json.put("face_token1", "63147ab427bdd4a5777de098df10e1bc") ;
-    	json.put("face_token2", "7a27ebfe49d8c0075e37b515222cc5d8");
+    	json.put("face_token1", "256a83a1edc397adb384a27813c782df") ;
+    	json.put("face_token2", "34c99ce6459ded8a0594db878afc98de");
 
         System.out.println(json.toJSONString());
         sendPost(url,json);

@@ -3,9 +3,10 @@ package com.eyeai.service;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONObject;
-
+@Service
 public class FaceSetServiceImpl implements FaceSetService {
     @Autowired
 	private PostService postservice;
