@@ -118,8 +118,8 @@ public class PostServiceImpl implements PostService {
 	   private static String encode(String value) throws Exception{
 	        return URLEncoder.encode(value, "UTF-8");
 	    }
-	    
-	   public static byte[] getBytesFromFile(File f) {
+	   @Override
+	   public byte[] getBytesFromFile(File f) {
 	        if (f == null) {
 	            return null;
 	        }

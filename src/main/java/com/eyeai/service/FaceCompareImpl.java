@@ -29,13 +29,17 @@ public class FaceCompareImpl implements FaceCompareService {
 		try {
 		    imageStore = fileService.upload(req, multiReq);
 		    System.out.println("imageStore "+imageStore );
+		    if(imageStore==null||imageStore.equals("")){
+		    	return "UPLOAD_FAILED";
+		    }
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	    //2.进行人证比对 获取tokens（人、证件）
 		 tokenlist = getTokenService.getFaceTokenList(imageStore);
-		 System.out.println("tokenlist "+tokenlist );
+System.out.println("tokenlist "+tokenlist );
+        if(tokenlist==null||tokenlist.size()==0||tokenlist.size()!=2)  return "IMAGE_NOTFIT";
 
 	    //3.进行比对
 
