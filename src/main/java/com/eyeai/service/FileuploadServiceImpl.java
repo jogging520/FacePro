@@ -27,8 +27,8 @@ public class FileuploadServiceImpl implements FileuploadService {
 	    String uploadFileSuffix =getFileSuffix(uploadFilePath);
 	    // 获取上传文件的输入流
 	    FileInputStream fis = (FileInputStream)multiReq.getFile("file1").getInputStream();
-	    //String imageStore ="E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix;
-	    String imageStore ="/Users/qiwu/Downloads/image/"+uploadFileName+"_eyeai."+uploadFileSuffix;
+	    String imageStore ="E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix;
+	    //String imageStore ="/Users/qiwu/Downloads/image/"+uploadFileName+"_eyeai."+uploadFileSuffix;
 
 	    if (fis!=null) {
     	    transferFile(fis,uploadFileName,uploadFileSuffix,imageStore);

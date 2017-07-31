@@ -40,8 +40,10 @@ public class GetFaceTokenServiceImpl implements GetFaceTokenService {
  	    String faces=faceDetecReturn.getString("faces");
         List<HashMap> list =JSON.parseArray(faces, HashMap.class); 
         List<String> tokenlist =new ArrayList<String>();
-        for(int i=0;i<list.size();i++){
-        	tokenlist.add((String)list.get(i).get("face_token"));
+        if(list!=null||list.size()>1){
+	        for(int i=0;i<list.size();i++){
+	        	tokenlist.add((String)list.get(i).get("face_token"));
+	        }
         }
         System.out.println("tokenlist is "+tokenlist);
 		return tokenlist;
