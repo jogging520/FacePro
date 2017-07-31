@@ -36,7 +36,7 @@ public class FaceCompareImpl implements FaceCompareService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	    //2.进行人证比对 获取tokens（人、证件）
+	    //2. 获取tokens（人、证件）
 		 tokenlist = getTokenService.getFaceTokenList(imageStore);
 System.out.println("tokenlist "+tokenlist );
         if(tokenlist==null||tokenlist.size()==0||tokenlist.size()!=2)  return "IMAGE_NOTFIT";
@@ -64,6 +64,35 @@ System.out.println("tokenlist "+tokenlist );
 			e.printStackTrace();
 		}
 		return response;
+	}
+
+
+	@Override
+	public String facecompareMuti(HttpServletRequest req) {
+		
+	    List<String> list =new ArrayList<>();
+	    List<String> tokenlist = new ArrayList<String>();
+	    
+	  //1.上传两张张图片（分别是人，证），存储到服务器中，返回存储地址list
+		try {
+			list = fileService.mutiupload(req);
+			if(list==null||list.size()==0){
+		    	return "UPLOAD_FAILED";
+		    }
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//2. 获取tokens（人、证件）
+		 for(String imageStore:list){
+			 List<String> Temptokenlist = new ArrayList<String>();
+			 Temptokenlist=getTokenService.getFaceTokenList(imageStore);
+//System.out.println("tokenlist "+tokenlist );
+             if(tokenlist==null||tokenlist.size()==0||tokenlist.size()!=1)  return "IMAGE_NOTFIT";
+             tokenlist.add(Temptokenlist.get(0));
+		 }
+		 
+	     return  CompareFaces(tokenlist);
 	}
 
 }

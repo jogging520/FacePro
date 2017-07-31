@@ -1,10 +1,10 @@
 package com.eyeai.service;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -37,16 +37,17 @@ public class FileuploadServiceImpl implements FileuploadService {
             System.out.println("上传文件为空");
       }
 	
-		return null;
+		return "";
 	}
 
     @Override
-    public void mutiupload(HttpServletRequest req) throws IOException{
+    public  List<String> mutiupload(HttpServletRequest req) throws IOException{
     	List<MultipartFile> files = ((MultipartHttpServletRequest) req).getFiles("file");
+    	List<String> resList=new ArrayList<>();
 	    MultipartFile file = null;
-	    // addtheimage judeg conunt
+	    if(files==null) return resList;
+	    if(files.size()!=2) return resList;
 	    
-	    //
 	    for (int i = 0; i < files.size(); ++i) {
 	        file = files.get(i);
 			// 获取上传文件的路径
@@ -60,11 +61,15 @@ public class FileuploadServiceImpl implements FileuploadService {
 		    String imageStore ="E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix;
 	        if (!file.isEmpty()) {
 	    	    transferFile(fis,uploadFileName,uploadFileSuffix,imageStore);
+	    	    resList.add(imageStore);
+	    	    System.out.println("多文件上传");
 	      } else {
 	        System.out.println("上传文件为空");
+	        return null;
 	      }
 	    }
 	    System.out.println("多文件上传成功了");
+		return resList;
     }
     public String getFilename(String uploadFilePath){
   	    

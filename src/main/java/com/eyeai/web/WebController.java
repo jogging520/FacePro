@@ -28,4 +28,8 @@ public class WebController {
     public String upload() {
         return "upload";
     }
+    @RequestMapping(value = "/uploadMuti")
+    public String uploadMuti() {
+        return "uploadMuti";
+    }
 }

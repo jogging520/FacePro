@@ -1,6 +1,7 @@
 package com.eyeai.service;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,6 +11,6 @@ public interface FileuploadService {
 	
 	 public String upload(HttpServletRequest req, MultipartHttpServletRequest multiReq ) throws IOException;
 	 
-	 public void mutiupload(HttpServletRequest req) throws IOException;
+	 public List<String> mutiupload(HttpServletRequest req) throws IOException;
 
 }
