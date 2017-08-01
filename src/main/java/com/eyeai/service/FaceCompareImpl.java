@@ -7,11 +7,14 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.alibaba.fastjson.JSONObject;
-@Service
+//@Service
+@Component
 public class FaceCompareImpl implements FaceCompareService {
 	@Autowired
 	private  FileuploadService fileService;
@@ -19,8 +22,15 @@ public class FaceCompareImpl implements FaceCompareService {
 	private  PostService postService;
     @Autowired
     private GetFaceTokenService getTokenService;
+    
+    @Value("${com.eyeai.api_key}")
+    private String api_key;
+    @Value("${com.eyeai.api_secret}")
+    private String api_secret;
+    @Value("${com.eyeai.compareurl}")
+    private String url;
+    
    
-
 	@Override
 	public String facecompare(HttpServletRequest req, MultipartHttpServletRequest multiReq) {
 		String imageStore="";
@@ -50,9 +60,9 @@ System.out.println("tokenlist "+tokenlist );
 	private String CompareFaces(List<String> tokenlist) {
 		String response="";
 		JSONObject json = new JSONObject();
-    	String url ="https://api-cn.faceplusplus.com/facepp/v3/compare";
-        json.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
-        json.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
+    	//String url ="https://api-cn.faceplusplus.com/facepp/v3/compare";
+        json.put("api_key", api_key);
+        json.put("api_secret", api_secret);
     	json.put("face_token1", tokenlist.get(0)) ;
     	json.put("face_token2", tokenlist.get(1));
 
@@ -84,14 +94,16 @@ System.out.println("tokenlist "+tokenlist );
 			e.printStackTrace();
 		}
 		//2. 获取tokens（人、证件）
+System.out.println("上传文件路径"+list);
 		 for(String imageStore:list){
 			 List<String> Temptokenlist = new ArrayList<String>();
 			 Temptokenlist=getTokenService.getFaceTokenList(imageStore);
 //System.out.println("tokenlist "+tokenlist );
-             if(tokenlist==null||tokenlist.size()==0||tokenlist.size()!=1)  return "IMAGE_NOTFIT";
+			 System.out.println("in for token"+Temptokenlist);
+             if(Temptokenlist==null||Temptokenlist.size()==0||Temptokenlist.size()!=1)  return "IMAGE_NOTFIT";
              tokenlist.add(Temptokenlist.get(0));
 		 }
-		 
+		 System.out.println("多文件比对list"+tokenlist);
 	     return  CompareFaces(tokenlist);
 	}
 

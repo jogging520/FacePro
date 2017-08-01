@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSON;
@@ -15,9 +16,16 @@ import com.alibaba.fastjson.JSONObject;
 public class GetFaceTokenServiceImpl implements GetFaceTokenService {
 	@Autowired
 	private PostService postService;
+	@Value("${com.eyeai.api_key}")
+	private String api_key;
+	@Value("${com.eyeai.api_secret}")
+	private String api_secret;
+	@Value("${com.eyeai.detecturl}")
+	private String url;
+	
 	List<String> tokenlist = new ArrayList<String>();
 	
-	String urldetect = "https://api-cn.faceplusplus.com/facepp/v3/detect";
+	//String urldetect = "https://api-cn.faceplusplus.com/facepp/v3/detect";
 	String response ="";
 	@Override
 	public List<String> getFaceTokenList(String imageStore) {
@@ -26,11 +34,11 @@ public class GetFaceTokenServiceImpl implements GetFaceTokenService {
         byte[] buff = postService.getBytesFromFile(file);
         HashMap<String, String> map = new HashMap<>();
         HashMap<String, byte[]> byteMap = new HashMap<>();
-        map.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
-        map.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
+        map.put("api_key", api_key);
+        map.put("api_secret", api_secret);
         byteMap.put("image_file", buff);
         try {
-			response =postService.postImage(urldetect, map, byteMap);
+			response =postService.postImage(url, map, byteMap);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -40,7 +48,7 @@ public class GetFaceTokenServiceImpl implements GetFaceTokenService {
  	    String faces=faceDetecReturn.getString("faces");
         List<HashMap> list =JSON.parseArray(faces, HashMap.class); 
         List<String> tokenlist =new ArrayList<String>();
-        if(list!=null||list.size()>1){
+        if(null!=list||list.size()>1){
 	        for(int i=0;i<list.size();i++){
 	        	tokenlist.add((String)list.get(i).get("face_token"));
 	        }
