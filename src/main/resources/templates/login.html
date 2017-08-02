@@ -2,21 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html >
 <head>
-    <title>图猫登录 </title>
-    <link rel="stylesheet" th:href="@{/css/application.css}" />
+  <meta charset="UTF-8"/>
+  <title>图猫登录</title>
+  <link rel='stylesheet prefetch' th:href="@{http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css}" />
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+  
 </head>
-<body>
+
 <div th:if="${param.error}">
     用户名或密码错
 </div>
 <div th:if="${param.logout}">
     您已注销成功
 </div>
-<form th:action="@{/login}" method="post">
-    <div><label> 用户名 : <input type="text" name="username"/> </label></div>
-    <div><label> 密 码 : <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="登录"/></div>
-</form>
+
+<body>
+    <div class="wrapper">
+    <form class="form-signin"  th:action="@{/login}" method="post">       
+      <h2 class="form-signin-heading">请登录</h2>
+      <input type="text" class="form-control" name="username" placeholder="" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> 记住我
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>   
+    </form>
+  </div>
+  
+  
 </body>
 </html>
