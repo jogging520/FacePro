@@ -38,7 +38,7 @@ public class FaceCompareImpl implements FaceCompareService {
 		//1.上传一张人证图片，存储到服务器中，返回存储地址
 		try {
 		    imageStore = fileService.upload(req, multiReq);
-		    System.out.println("imageStore "+imageStore );
+System.out.println("imageStore "+imageStore );
 		    if(imageStore==null||imageStore.equals("")){
 		    	return "UPLOAD_FAILED";
 		    }

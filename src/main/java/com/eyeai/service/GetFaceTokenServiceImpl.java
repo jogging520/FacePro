@@ -44,16 +44,23 @@ public class GetFaceTokenServiceImpl implements GetFaceTokenService {
 			e.printStackTrace();
 		}
        //2. 获取token list
+        List<String> tokenlist =new ArrayList<String>();
+        
  	    JSONObject faceDetecReturn=JSON.parseObject(response);
+ 	    //长传图片后，返回空值，或者错误
+ 	    if(faceDetecReturn==null||faceDetecReturn.containsKey("error_message")){
+ 	    	 
+ 	    	return tokenlist;
+ 	    }
  	    String faces=faceDetecReturn.getString("faces");
         List<HashMap> list =JSON.parseArray(faces, HashMap.class); 
-        List<String> tokenlist =new ArrayList<String>();
-        if(null!=list||list.size()>1){
+        
+        if(null!=list){
 	        for(int i=0;i<list.size();i++){
 	        	tokenlist.add((String)list.get(i).get("face_token"));
 	        }
         }
-        System.out.println("tokenlist is "+tokenlist);
+  System.out.println("tokenlist is "+tokenlist);
 		return tokenlist;
 	}
 
