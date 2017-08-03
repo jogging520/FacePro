@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>手持证件照上传</title>
-     <link rel="stylesheet" th:href="@{/css/application.css}" />
-</head>
-<body> 
-<!--<form action="http://wafmw3.natappfree.cc/CompareFace" method="POST" enctype="multipart/form-data">  -->
-<form action="http://localhost:8080/CompareFace" method="POST" enctype="multipart/form-data">
-
-    单个文件上传（本人手持身份证照片）
-    <input type="file" name="file1"/>
-    <!--  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-    -->
-    <input type="submit" value = "进行人证对比"/>
-</form>
-
+	<head>
+		<meta charset="UTF-8">
+		<title>人证照片上传</title>
+		<!-- 引用控制层插件样式 -->
+		<link rel="stylesheet" th:href="@{/css/upload.css}" />
+		
+		<script type="text/javascript" th:src="@{/js/jquery-1.11.0.js}"></script>
+		<!-- 引用核心层插件 -->
+		<script type="text/javascript" th:src="@{/js/zyFile.js}"></script>
+		<!-- 引用控制层插件 -->
+		<script type="text/javascript" th:src="@{/js/zyUpload.js}"></script>
+		<!-- 引用初始化JS -->
+		<script type="text/javascript" th:src="@{/js/demo.js}"></script>
+	</head>
+	
+	<body>
+		<h1 style="text-align:center;">上传人证照片（手持身份证）</h1>
+	    <div id="demo" class="demo"></div>   
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>图猫科技</p>
+</div>
 </body>
 </html>
+
+
+
+
+
+
+

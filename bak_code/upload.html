@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>手持证件照上传</title>
+     <link rel="stylesheet" th:href="@{/css/application.css}" />
+</head>
+<body> 
+<!--<form action="http://wafmw3.natappfree.cc/CompareFace" method="POST" enctype="multipart/form-data">  -->
+<form action="http://localhost:8080/CompareFace" method="POST" enctype="multipart/form-data" >
+
+    单个文件上传（本人手持身份证照片）
+    <input type="file" name="file1"/>
+    <!--  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    -->
+    <input type="submit" value = "进行人证对比"/>
+</form>
+
+</body>
+</html>
