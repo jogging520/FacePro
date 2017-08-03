@@ -1,0 +1,369 @@
+2017-08-03 23:05:23,445  INFO Application:48 - Starting Application on wqwjdeMacBook-Air.local with PID 1291 (/Users/qiwu/git/FacePro/target/classes started by qiwu in /Users/qiwu/git/FacePro)
+2017-08-03 23:05:23,449  INFO Application:666 - No active profile set, falling back to default profiles: default
+2017-08-03 23:05:24,155  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:05:24 CST 2017]; root of context hierarchy
+2017-08-03 23:05:24,621  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2017-08-03 23:05:26,850  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2017-08-03 23:05:26,898  INFO StandardService:180 - Starting service Tomcat
+2017-08-03 23:05:26,902  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-08-03 23:05:27,160  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2017-08-03 23:05:27,160  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 3017 ms
+2017-08-03 23:05:27,642  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-03 23:05:27,643  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-03 23:05:27,644  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-03 23:05:27,644  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-03 23:05:27,646  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-03 23:05:27,646  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-03 23:05:28,498  INFO DefaultSecurityFilterChain:28 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5171da0e, org.springframework.security.web.context.SecurityContextPersistenceFilter@66652a7a, org.springframework.security.web.header.HeaderWriterFilter@521bab15, org.springframework.security.web.authentication.logout.LogoutFilter@3137ae92, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6b3d78b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30d93548, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b027d3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ed218cb, org.springframework.security.web.session.SessionManagementFilter@3bc817c8, org.springframework.security.web.access.ExceptionTranslationFilter@8066340, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a68628d]
+2017-08-03 23:05:28,937  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:05:24 CST 2017]; root of context hierarchy
+2017-08-03 23:05:29,112  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFace],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFile(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-03 23:05:29,113  INFO RequestMappingHandlerMapping:527 - Mapped "{[/mutiUploadFiles],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFiles(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-03 23:05:29,115  INFO RequestMappingHandlerMapping:527 - Mapped "{[/]}" onto public java.lang.String com.eyeai.web.WebController.index(org.springframework.ui.ModelMap)
+2017-08-03 23:05:29,115  INFO RequestMappingHandlerMapping:527 - Mapped "{[/upload]}" onto public java.lang.String com.eyeai.web.WebController.upload()
+2017-08-03 23:05:29,116  INFO RequestMappingHandlerMapping:527 - Mapped "{[/hello]}" onto public java.lang.String com.eyeai.web.WebController.hello()
+2017-08-03 23:05:29,116  INFO RequestMappingHandlerMapping:527 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.login()
+2017-08-03 23:05:29,117  INFO RequestMappingHandlerMapping:527 - Mapped "{[/uploadMuti]}" onto public java.lang.String com.eyeai.web.WebController.uploadMuti()
+2017-08-03 23:05:29,120  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-03 23:05:29,121  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-03 23:05:29,155  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:05:29,156  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:05:29,181  INFO ExceptionHandlerExceptionResolver:267 - Detected @ExceptionHandler methods in globalExceptionHandler
+2017-08-03 23:05:29,210  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:05:30,131  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-08-03 23:05:30,194  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:05:30,204  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:05:30,255  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2017-08-03 23:05:30,294  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8080 (http)
+2017-08-03 23:05:30,300  INFO Application:57 - Started Application in 7.972 seconds (JVM running for 9.559)
+2017-08-03 23:05:42,409  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-03 23:05:42,409  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-03 23:05:42,429  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2017-08-03 23:05:42,543  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-08-03 23:05:42,780  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.TemplateResolver
+2017-08-03 23:05:42,781  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-08-03 23:05:42,782  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-08-03 23:05:42,782  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-08-03 23:05:42,789  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.TemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-08-03 23:05:42,789  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2017-08-03 23:06:23,679  INFO FaceCompareImpl:44 - 上传照片的存储路径为：E:/images/2317759269_eyeai.jpg
+2017-08-03 23:08:19,951  INFO AnnotationConfigEmbeddedWebApplicationContext:960 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:05:24 CST 2017]; root of context hierarchy
+2017-08-03 23:08:19,955  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-08-03 23:16:24,902  INFO Application:48 - Starting Application on wqwjdeMacBook-Air.local with PID 1303 (/Users/qiwu/git/FacePro/target/classes started by qiwu in /Users/qiwu/git/FacePro)
+2017-08-03 23:16:24,906  INFO Application:666 - No active profile set, falling back to default profiles: default
+2017-08-03 23:16:25,348  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:16:25 CST 2017]; root of context hierarchy
+2017-08-03 23:16:25,354  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2017-08-03 23:16:26,946  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2017-08-03 23:16:26,965  INFO StandardService:180 - Starting service Tomcat
+2017-08-03 23:16:26,973  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-08-03 23:16:27,125  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2017-08-03 23:16:27,129  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 1782 ms
+2017-08-03 23:16:27,508  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-03 23:16:27,509  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-03 23:16:27,510  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-03 23:16:27,511  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-03 23:16:27,513  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-03 23:16:27,514  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-03 23:16:27,992  INFO DefaultSecurityFilterChain:28 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61880819, org.springframework.security.web.context.SecurityContextPersistenceFilter@7db3d2f7, org.springframework.security.web.header.HeaderWriterFilter@50bb75cb, org.springframework.security.web.authentication.logout.LogoutFilter@6bfd1c79, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a3fa87c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@406a840e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66d17297, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48dc63f5, org.springframework.security.web.session.SessionManagementFilter@4197baaa, org.springframework.security.web.access.ExceptionTranslationFilter@228e3761, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b87c7a3]
+2017-08-03 23:16:28,272  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:16:25 CST 2017]; root of context hierarchy
+2017-08-03 23:16:28,368  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFace],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFile(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-03 23:16:28,370  INFO RequestMappingHandlerMapping:527 - Mapped "{[/mutiUploadFiles],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFiles(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-03 23:16:28,371  INFO RequestMappingHandlerMapping:527 - Mapped "{[/]}" onto public java.lang.String com.eyeai.web.WebController.index(org.springframework.ui.ModelMap)
+2017-08-03 23:16:28,372  INFO RequestMappingHandlerMapping:527 - Mapped "{[/upload]}" onto public java.lang.String com.eyeai.web.WebController.upload()
+2017-08-03 23:16:28,373  INFO RequestMappingHandlerMapping:527 - Mapped "{[/hello]}" onto public java.lang.String com.eyeai.web.WebController.hello()
+2017-08-03 23:16:28,373  INFO RequestMappingHandlerMapping:527 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.login()
+2017-08-03 23:16:28,374  INFO RequestMappingHandlerMapping:527 - Mapped "{[/uploadMuti]}" onto public java.lang.String com.eyeai.web.WebController.uploadMuti()
+2017-08-03 23:16:28,378  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-03 23:16:28,379  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-03 23:16:28,415  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:16:28,416  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:16:28,442  INFO ExceptionHandlerExceptionResolver:267 - Detected @ExceptionHandler methods in globalExceptionHandler
+2017-08-03 23:16:28,487  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:16:29,089  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-08-03 23:16:29,141  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:16:29,152  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:16:29,190  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2017-08-03 23:16:29,210  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8080 (http)
+2017-08-03 23:16:29,218  INFO Application:57 - Started Application in 4.773 seconds (JVM running for 5.193)
+2017-08-03 23:16:33,730  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-03 23:16:33,731  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-03 23:16:33,748  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2017-08-03 23:16:33,846  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-08-03 23:16:34,062  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.TemplateResolver
+2017-08-03 23:16:34,063  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-08-03 23:16:34,064  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-08-03 23:16:34,064  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-08-03 23:16:34,071  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.TemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-08-03 23:16:34,072  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2017-08-03 23:16:52,553  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317756292_eyeai.jpg
+2017-08-03 23:16:54,114  INFO FaceCompareImpl:56 - 获取image头像列表[7f6641f90a59e8237f6ec59f9cdd7316]
+2017-08-03 23:16:54,115 ERROR FaceCompareImpl:58 - 获取头像列表非法！[7f6641f90a59e8237f6ec59f9cdd7316]
+2017-08-03 23:17:47,600  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317816942_eyeai.jpg
+2017-08-03 23:17:48,472  INFO FaceCompareImpl:56 - 获取image头像列表[dae453d11fd6cf1f39c47dc4b12ab726, 1ae0e8b257cf3b416a26b91bf5563065]
+2017-08-03 23:17:48,472  INFO FaceCompareImpl:76 - 发起比对请求:{"api_key":"EmwiWkkws71IqE1zQbdjkATEHgGlBeSq","face_token2":"1ae0e8b257cf3b416a26b91bf5563065","face_token1":"dae453d11fd6cf1f39c47dc4b12ab726","api_secret":"p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3"}
+2017-08-03 23:18:48,673  INFO AnnotationConfigEmbeddedWebApplicationContext:960 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:16:25 CST 2017]; root of context hierarchy
+2017-08-03 23:18:48,676  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-08-03 23:36:34,961  INFO Application:48 - Starting Application on wqwjdeMacBook-Air.local with PID 1324 (/Users/qiwu/git/FacePro/target/classes started by qiwu in /Users/qiwu/git/FacePro)
+2017-08-03 23:36:34,966  INFO Application:666 - No active profile set, falling back to default profiles: default
+2017-08-03 23:36:34,989  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2017-08-03 23:36:35,305  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:36:35 CST 2017]; root of context hierarchy
+2017-08-03 23:36:36,895  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2017-08-03 23:36:36,911  INFO StandardService:180 - Starting service Tomcat
+2017-08-03 23:36:36,913  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-08-03 23:36:37,037  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2017-08-03 23:36:37,038  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 1737 ms
+2017-08-03 23:36:37,452  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-03 23:36:37,453  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-03 23:36:37,454  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-03 23:36:37,454  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-03 23:36:37,456  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-03 23:36:37,459  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-03 23:36:37,902  INFO DefaultSecurityFilterChain:28 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@897d6a1, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c6e7026, org.springframework.security.web.header.HeaderWriterFilter@4703724b, org.springframework.security.web.authentication.logout.LogoutFilter@612d3f94, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1b7a1160, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cc70402, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cfe596e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bcc65d3, org.springframework.security.web.session.SessionManagementFilter@7e7073e7, org.springframework.security.web.access.ExceptionTranslationFilter@4fe0dc41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42767642]
+2017-08-03 23:36:38,174  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:36:35 CST 2017]; root of context hierarchy
+2017-08-03 23:36:38,280  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFace],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFile(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-03 23:36:38,281  INFO RequestMappingHandlerMapping:527 - Mapped "{[/mutiUploadFiles],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFiles(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-03 23:36:38,283  INFO RequestMappingHandlerMapping:527 - Mapped "{[/]}" onto public java.lang.String com.eyeai.web.WebController.index(org.springframework.ui.ModelMap)
+2017-08-03 23:36:38,283  INFO RequestMappingHandlerMapping:527 - Mapped "{[/upload]}" onto public java.lang.String com.eyeai.web.WebController.upload()
+2017-08-03 23:36:38,284  INFO RequestMappingHandlerMapping:527 - Mapped "{[/hello]}" onto public java.lang.String com.eyeai.web.WebController.hello()
+2017-08-03 23:36:38,286  INFO RequestMappingHandlerMapping:527 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.login()
+2017-08-03 23:36:38,287  INFO RequestMappingHandlerMapping:527 - Mapped "{[/uploadMuti]}" onto public java.lang.String com.eyeai.web.WebController.uploadMuti()
+2017-08-03 23:36:38,294  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-03 23:36:38,295  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-03 23:36:38,331  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:36:38,331  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:36:38,379  INFO ExceptionHandlerExceptionResolver:267 - Detected @ExceptionHandler methods in globalExceptionHandler
+2017-08-03 23:36:38,405  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:36:38,957  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-08-03 23:36:38,996  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:36:39,002  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:36:39,037  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2017-08-03 23:36:39,058  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8080 (http)
+2017-08-03 23:36:39,064  INFO Application:57 - Started Application in 4.825 seconds (JVM running for 5.275)
+2017-08-03 23:36:44,991  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-03 23:36:44,992  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-03 23:36:45,010  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2017-08-03 23:36:45,114  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-08-03 23:36:45,363  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.TemplateResolver
+2017-08-03 23:36:45,364  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-08-03 23:36:45,364  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-08-03 23:36:45,365  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-08-03 23:36:45,371  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.TemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-08-03 23:36:45,372  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2017-08-03 23:37:01,142  INFO FileuploadServiceImpl:44 - 上传文件成功！
+2017-08-03 23:37:01,143  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317759014_eyeai.jpg
+2017-08-03 23:37:02,603  INFO GetFaceTokenServiceImpl:43 - 请求头像获取接口，获得头像返回：{"image_id": "57PD4fNl+p9mZ9oJTJKOPw==", "request_id": "1501774617,465aedac-424e-4ef4-882e-34374e00ce4a", "time_used": 355, "faces": [{"face_rectangle": {"width": 380, "top": 310, "left": 383, "height": 380}, "face_token": "7246a01eab24adc886059a887c835a65"}, {"face_rectangle": {"width": 58, "top": 188, "left": 1035, "height": 58}, "face_token": "58fd69ee16ce5e3984b55b4aed631683"}, {"face_rectangle": {"width": 55, "top": 995, "left": 550, "height": 55}, "face_token": "cbe346b07ffd83789b19906661a93964"}]}
+2017-08-03 23:37:02,708  INFO GetFaceTokenServiceImpl:63 - 获得头像列表[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964]
+2017-08-03 23:37:02,708  INFO FaceCompareImpl:56 - 获取image头像列表[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964]
+2017-08-03 23:37:02,709 ERROR FaceCompareImpl:58 - 获取头像列表非法！[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964]
+2017-08-03 23:37:30,271  INFO FileuploadServiceImpl:44 - 上传文件成功！
+2017-08-03 23:37:30,272  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317762387_eyeai.jpg
+2017-08-03 23:37:31,065  INFO GetFaceTokenServiceImpl:43 - 请求头像获取接口，获得头像返回：{"image_id": "8AKT45mWKns/+kx9a5AwUg==", "request_id": "1501774645,ba39c98e-5238-4a31-8493-1a088a995fd5", "time_used": 271, "faces": [{"face_rectangle": {"width": 820, "top": 123, "left": 198, "height": 820}, "face_token": "20711315c88364852e71921ec958d765"}, {"face_rectangle": {"width": 69, "top": 1043, "left": 691, "height": 69}, "face_token": "0330fe95095f2237e252c5649c02b640"}]}
+2017-08-03 23:37:31,067  INFO GetFaceTokenServiceImpl:63 - 获得头像列表[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964, 20711315c88364852e71921ec958d765, 0330fe95095f2237e252c5649c02b640]
+2017-08-03 23:37:31,068  INFO FaceCompareImpl:56 - 获取image头像列表[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964, 20711315c88364852e71921ec958d765, 0330fe95095f2237e252c5649c02b640]
+2017-08-03 23:37:31,069 ERROR FaceCompareImpl:58 - 获取头像列表非法！[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964, 20711315c88364852e71921ec958d765, 0330fe95095f2237e252c5649c02b640]
+2017-08-03 23:38:55,504  INFO FileuploadServiceImpl:44 - 上传文件成功！
+2017-08-03 23:38:55,504  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317710523_eyeai.jpg
+2017-08-03 23:38:56,363  INFO GetFaceTokenServiceImpl:43 - 请求头像获取接口，获得头像返回：{"image_id": "8cbTOXyZf38jrcUUYFBJcA==", "request_id": "1501774730,b964653b-6f40-46d2-bd8e-dbd2fecda3a5", "time_used": 348, "faces": [{"face_rectangle": {"width": 357, "top": 119, "left": 465, "height": 357}, "face_token": "b649349188a2c2227e1806a8ed13a3ee"}, {"face_rectangle": {"width": 51, "top": 987, "left": 653, "height": 51}, "face_token": "d1d7ebb349a0f401343acf2f3e135f6f"}]}
+2017-08-03 23:38:56,364  INFO GetFaceTokenServiceImpl:63 - 获得头像列表[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964, 20711315c88364852e71921ec958d765, 0330fe95095f2237e252c5649c02b640, b649349188a2c2227e1806a8ed13a3ee, d1d7ebb349a0f401343acf2f3e135f6f]
+2017-08-03 23:38:56,365  INFO FaceCompareImpl:56 - 获取image头像列表[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964, 20711315c88364852e71921ec958d765, 0330fe95095f2237e252c5649c02b640, b649349188a2c2227e1806a8ed13a3ee, d1d7ebb349a0f401343acf2f3e135f6f]
+2017-08-03 23:38:56,365 ERROR FaceCompareImpl:58 - 获取头像列表非法！[7246a01eab24adc886059a887c835a65, 58fd69ee16ce5e3984b55b4aed631683, cbe346b07ffd83789b19906661a93964, 20711315c88364852e71921ec958d765, 0330fe95095f2237e252c5649c02b640, b649349188a2c2227e1806a8ed13a3ee, d1d7ebb349a0f401343acf2f3e135f6f]
+2017-08-03 23:39:11,602  INFO AnnotationConfigEmbeddedWebApplicationContext:960 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:36:35 CST 2017]; root of context hierarchy
+2017-08-03 23:39:11,605  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-08-03 23:41:35,486  INFO Application:48 - Starting Application on wqwjdeMacBook-Air.local with PID 1334 (/Users/qiwu/git/FacePro/target/classes started by qiwu in /Users/qiwu/git/FacePro)
+2017-08-03 23:41:35,492  INFO Application:666 - No active profile set, falling back to default profiles: default
+2017-08-03 23:41:35,527  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2017-08-03 23:41:35,790  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:41:35 CST 2017]; root of context hierarchy
+2017-08-03 23:41:37,391  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2017-08-03 23:41:37,413  INFO StandardService:180 - Starting service Tomcat
+2017-08-03 23:41:37,414  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-08-03 23:41:37,544  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2017-08-03 23:41:37,545  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 1759 ms
+2017-08-03 23:41:37,939  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-03 23:41:37,940  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-03 23:41:37,940  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-03 23:41:37,940  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-03 23:41:37,942  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-03 23:41:37,943  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-03 23:41:38,417  INFO DefaultSecurityFilterChain:28 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@542237ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ad8c07, org.springframework.security.web.header.HeaderWriterFilter@31ff3e52, org.springframework.security.web.authentication.logout.LogoutFilter@7aa66669, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35bc1af1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63c523c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b7242cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b849550, org.springframework.security.web.session.SessionManagementFilter@13a3984b, org.springframework.security.web.access.ExceptionTranslationFilter@4f9bbc07, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ecc4d30]
+2017-08-03 23:41:38,665  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:41:35 CST 2017]; root of context hierarchy
+2017-08-03 23:41:38,748  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFace],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFile(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-03 23:41:38,750  INFO RequestMappingHandlerMapping:527 - Mapped "{[/mutiUploadFiles],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFiles(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-03 23:41:38,752  INFO RequestMappingHandlerMapping:527 - Mapped "{[/]}" onto public java.lang.String com.eyeai.web.WebController.index(org.springframework.ui.ModelMap)
+2017-08-03 23:41:38,753  INFO RequestMappingHandlerMapping:527 - Mapped "{[/upload]}" onto public java.lang.String com.eyeai.web.WebController.upload()
+2017-08-03 23:41:38,754  INFO RequestMappingHandlerMapping:527 - Mapped "{[/hello]}" onto public java.lang.String com.eyeai.web.WebController.hello()
+2017-08-03 23:41:38,754  INFO RequestMappingHandlerMapping:527 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.login()
+2017-08-03 23:41:38,755  INFO RequestMappingHandlerMapping:527 - Mapped "{[/uploadMuti]}" onto public java.lang.String com.eyeai.web.WebController.uploadMuti()
+2017-08-03 23:41:38,758  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-03 23:41:38,759  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-03 23:41:38,792  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:41:38,793  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:41:38,827  INFO ExceptionHandlerExceptionResolver:267 - Detected @ExceptionHandler methods in globalExceptionHandler
+2017-08-03 23:41:38,854  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:41:39,442  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-08-03 23:41:39,488  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:41:39,498  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:41:39,529  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2017-08-03 23:41:39,544  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8080 (http)
+2017-08-03 23:41:39,552  INFO Application:57 - Started Application in 4.78 seconds (JVM running for 5.192)
+2017-08-03 23:41:48,060  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-03 23:41:48,061  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-03 23:41:48,076  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2017-08-03 23:41:48,169  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-08-03 23:41:48,364  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.TemplateResolver
+2017-08-03 23:41:48,365  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-08-03 23:41:48,366  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-08-03 23:41:48,366  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-08-03 23:41:48,373  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.TemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-08-03 23:41:48,374  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2017-08-03 23:42:09,557  INFO FileuploadServiceImpl:44 - 上传文件成功！
+2017-08-03 23:42:09,558  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317762810_eyeai.jpg
+2017-08-03 23:42:10,923  INFO GetFaceTokenServiceImpl:42 - 请求头像获取接口，获得头像返回：{"image_id": "MZ5QVKpo68zvfjsR+4XqWA==", "request_id": "1501774925,211652b0-0998-4878-a963-09c2fbf463b8", "time_used": 412, "faces": []}
+2017-08-03 23:42:11,006  INFO GetFaceTokenServiceImpl:64 - 获得头像列表[]
+2017-08-03 23:42:11,007  INFO FaceCompareImpl:56 - 获取image头像列表[]
+2017-08-03 23:42:11,007 ERROR FaceCompareImpl:58 - 获取头像列表非法！[]
+2017-08-03 23:42:51,598  INFO FileuploadServiceImpl:44 - 上传文件成功！
+2017-08-03 23:42:51,599  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317762387_eyeai.jpg
+2017-08-03 23:42:52,902  INFO GetFaceTokenServiceImpl:42 - 请求头像获取接口，获得头像返回：{"image_id": "8AKT45mWKns/+kx9a5AwUg==", "request_id": "1501774967,3af2bf9a-4447-4abc-8564-c6976ff1a12c", "time_used": 326, "faces": [{"face_rectangle": {"width": 820, "top": 123, "left": 198, "height": 820}, "face_token": "5aef4e45629f30bce3b039f6ad007549"}, {"face_rectangle": {"width": 69, "top": 1043, "left": 691, "height": 69}, "face_token": "4bb326f5175aa46574a854105df3fce5"}]}
+2017-08-03 23:42:52,908  INFO GetFaceTokenServiceImpl:64 - 获得头像列表[5aef4e45629f30bce3b039f6ad007549, 4bb326f5175aa46574a854105df3fce5]
+2017-08-03 23:42:52,909  INFO FaceCompareImpl:56 - 获取image头像列表[5aef4e45629f30bce3b039f6ad007549, 4bb326f5175aa46574a854105df3fce5]
+2017-08-03 23:42:52,909  INFO FaceCompareImpl:76 - 发起比对请求:{"api_key":"EmwiWkkws71IqE1zQbdjkATEHgGlBeSq","face_token2":"4bb326f5175aa46574a854105df3fce5","face_token1":"5aef4e45629f30bce3b039f6ad007549","api_secret":"p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3"}
+2017-08-03 23:47:36,939  INFO AnnotationConfigEmbeddedWebApplicationContext:960 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:41:35 CST 2017]; root of context hierarchy
+2017-08-03 23:47:36,941  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-08-03 23:47:44,541  INFO Application:48 - Starting Application on wqwjdeMacBook-Air.local with PID 1339 (/Users/qiwu/git/FacePro/target/classes started by qiwu in /Users/qiwu/git/FacePro)
+2017-08-03 23:47:44,549  INFO Application:666 - No active profile set, falling back to default profiles: default
+2017-08-03 23:47:44,578  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2017-08-03 23:47:44,871  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:47:44 CST 2017]; root of context hierarchy
+2017-08-03 23:47:46,481  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2017-08-03 23:47:46,498  INFO StandardService:180 - Starting service Tomcat
+2017-08-03 23:47:46,500  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-08-03 23:47:46,629  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2017-08-03 23:47:46,629  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 1762 ms
+2017-08-03 23:47:47,024  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-03 23:47:47,025  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-03 23:47:47,026  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-03 23:47:47,027  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-03 23:47:47,028  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-03 23:47:47,029  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-03 23:47:47,496  INFO DefaultSecurityFilterChain:28 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@681c397c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4dd19de8, org.springframework.security.web.header.HeaderWriterFilter@5cd20efe, org.springframework.security.web.authentication.logout.LogoutFilter@5c7d7823, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3c5115b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47871f16, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49928d38, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b375e0, org.springframework.security.web.session.SessionManagementFilter@55f7942d, org.springframework.security.web.access.ExceptionTranslationFilter@50600acd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@778c60a8]
+2017-08-03 23:47:47,760  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:47:44 CST 2017]; root of context hierarchy
+2017-08-03 23:47:47,855  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFace],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFile(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-03 23:47:47,856  INFO RequestMappingHandlerMapping:527 - Mapped "{[/mutiUploadFiles],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFiles(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-03 23:47:47,858  INFO RequestMappingHandlerMapping:527 - Mapped "{[/]}" onto public java.lang.String com.eyeai.web.WebController.index(org.springframework.ui.ModelMap)
+2017-08-03 23:47:47,859  INFO RequestMappingHandlerMapping:527 - Mapped "{[/upload]}" onto public java.lang.String com.eyeai.web.WebController.upload()
+2017-08-03 23:47:47,859  INFO RequestMappingHandlerMapping:527 - Mapped "{[/hello]}" onto public java.lang.String com.eyeai.web.WebController.hello()
+2017-08-03 23:47:47,860  INFO RequestMappingHandlerMapping:527 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.login()
+2017-08-03 23:47:47,861  INFO RequestMappingHandlerMapping:527 - Mapped "{[/uploadMuti]}" onto public java.lang.String com.eyeai.web.WebController.uploadMuti()
+2017-08-03 23:47:47,865  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-03 23:47:47,866  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-03 23:47:47,907  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:47:47,909  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:47:47,937  INFO ExceptionHandlerExceptionResolver:267 - Detected @ExceptionHandler methods in globalExceptionHandler
+2017-08-03 23:47:47,985  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-03 23:47:48,565  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-08-03 23:47:48,605  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:47:48,613  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"]
+2017-08-03 23:47:48,642  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2017-08-03 23:47:48,668  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8080 (http)
+2017-08-03 23:47:48,674  INFO Application:57 - Started Application in 4.889 seconds (JVM running for 5.288)
+2017-08-03 23:47:53,116  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-03 23:47:53,117  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-03 23:47:53,137  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2017-08-03 23:47:53,255  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-08-03 23:47:53,450  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.TemplateResolver
+2017-08-03 23:47:53,450  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-08-03 23:47:53,451  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-08-03 23:47:53,452  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-08-03 23:47:53,456  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.TemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-08-03 23:47:53,457  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2017-08-03 23:48:27,658  INFO FileuploadServiceImpl:44 - 上传文件成功！
+2017-08-03 23:48:27,660  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317710523_eyeai.jpg
+2017-08-03 23:48:28,977  INFO GetFaceTokenServiceImpl:42 - 请求头像获取接口，获得头像返回：{"image_id": "8cbTOXyZf38jrcUUYFBJcA==", "request_id": "1501775303,372796fd-73d0-4d1b-97e4-e4072fd18860", "time_used": 354, "faces": [{"face_rectangle": {"width": 357, "top": 119, "left": 465, "height": 357}, "face_token": "e1b154badbf96810dde2957135db8548"}, {"face_rectangle": {"width": 51, "top": 987, "left": 653, "height": 51}, "face_token": "fc183adc17a32af70a00f78a01230961"}]}
+2017-08-03 23:48:29,062  INFO GetFaceTokenServiceImpl:64 - 获得头像列表[e1b154badbf96810dde2957135db8548, fc183adc17a32af70a00f78a01230961]
+2017-08-03 23:48:29,063  INFO FaceCompareImpl:56 - 获取image头像列表[e1b154badbf96810dde2957135db8548, fc183adc17a32af70a00f78a01230961]
+2017-08-03 23:48:29,063  INFO FaceCompareImpl:76 - 发起比对请求:{"api_key":"EmwiWkkws71IqE1zQbdjkATEHgGlBeSq","face_token2":"fc183adc17a32af70a00f78a01230961","face_token1":"e1b154badbf96810dde2957135db8548","api_secret":"p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3"}
+2017-08-03 23:48:29,895  INFO CompareController:57 - 获取比对分数:61.355
+2017-08-03 23:50:47,137  INFO AnnotationConfigEmbeddedWebApplicationContext:960 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c46bcd4: startup date [Thu Aug 03 23:47:44 CST 2017]; root of context hierarchy
+2017-08-03 23:50:47,139  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown

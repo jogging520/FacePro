@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -22,6 +23,8 @@ public class CompareController {
 	
 	@Autowired
 	 private FaceCompareService faceCompareService;
+	
+	 private Logger logger=Logger.getLogger(getClass());
 	
 	@RequestMapping(value = "/CompareFace", method = RequestMethod.POST)
 	//@ResponseBody
@@ -40,7 +43,7 @@ public class CompareController {
 			if(response.equals("")){
 				map.addAttribute("resposne", "比对失败,请重新比对！");
 				return "fail";
-				}
+			}
 			
 			JSONObject json=JSON.parseObject(response);
 			
@@ -51,7 +54,7 @@ public class CompareController {
 		    String score = json.get("confidence").toString();
 	
             float s = Float.parseFloat((score.trim()));
-		    System.out.println("int test1");
+            logger.info("单张头像获取比对分数:"+s);
 		    if(s >= 60.0){
 		        map.addAttribute("response", "比对成功!人证一致!");
 		    }else{
@@ -89,7 +92,7 @@ public class CompareController {
 			    String score = json.get("confidence").toString();
 		
 	            float s = Float.parseFloat((score.trim()));
-			    System.out.println("int test1");
+	            logger.info("多张头像照片获取比对分数:"+s);
 			    if(s >= 60.0){
 			        map.addAttribute("response", "比对成功!人证一致!");
 			    }else{

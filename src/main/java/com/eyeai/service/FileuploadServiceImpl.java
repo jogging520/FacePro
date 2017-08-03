@@ -9,13 +9,20 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 @Service
 public class FileuploadServiceImpl implements FileuploadService {
-    FileOutputStream fos = null;
+    private FileOutputStream fos = null;
+    
+    @Value("${com.eyeai.storepath}")
+    private String storepath;
+    
+    private Logger logger =Logger.getLogger(getClass());
     
 	@Override
 	public String upload(HttpServletRequest req, MultipartHttpServletRequest multiReq) throws IOException {
@@ -29,13 +36,12 @@ public class FileuploadServiceImpl implements FileuploadService {
 	    String uploadFileSuffix =getFileSuffix(uploadFilePath);
 	    // 获取上传文件的输入流
 	    FileInputStream fis = (FileInputStream)multiReq.getFile("file1").getInputStream();
-
 	 
-	    String imageStore ="E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix;
-	    //String imageStore ="/Users/qiwu/Downloads/image/"+uploadFileName+"_eyeai."+uploadFileSuffix;
+	    String imageStore =storepath+uploadFileName+"_eyeai."+uploadFileSuffix;
 
 	    if (fis!=null) {
-    	    transferFile(fis,uploadFileName,uploadFileSuffix,imageStore);
+    	    transferFile(fis,imageStore);
+    	    logger.info("上传文件成功！");
     	    return imageStore;
       } else {
             System.out.println("上传文件为空");
@@ -46,7 +52,9 @@ public class FileuploadServiceImpl implements FileuploadService {
 
     @Override
     public  List<String> mutiupload(HttpServletRequest req) throws IOException{
+    	//多文件上传
     	List<MultipartFile> files = ((MultipartHttpServletRequest) req).getFiles("file");
+    	//返回上传成功文件位置
     	List<String> resList=new ArrayList<>();
 	    MultipartFile file = null;
 	    if(files==null) return resList;
@@ -64,15 +72,15 @@ public class FileuploadServiceImpl implements FileuploadService {
 		    FileInputStream fis = (FileInputStream) file.getInputStream();
 		    String imageStore ="E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix;
 	        if (!file.isEmpty()) {
-	    	    transferFile(fis,uploadFileName,uploadFileSuffix,imageStore);
+	    	    transferFile(fis,imageStore);
 	    	    resList.add(imageStore);
-	    	    System.out.println("多文件上传");
+	    	    logger.info("多文件上传成功"+i);
 	      } else {
-	        System.out.println("上传文件为空");
+	        logger.error("上传文件为空");
 	        return null;
 	      }
 	    }
-	    System.out.println("多文件上传成功了");
+	    logger.info("多文件上传成功1");;
 		return resList;
     }
     public String getFilename(String uploadFilePath){
@@ -91,11 +99,8 @@ public class FileuploadServiceImpl implements FileuploadService {
   		return uploadFileSuffix;
   	}
 
-    public void transferFile( FileInputStream  fis, String uploadFileName, String uploadFileSuffix,String imageStore){
+    public void transferFile( FileInputStream  fis,String imageStore){
     	try {
-//    		      fos = new FileOutputStream(new File("/Users/qiwu/Downloads/" + uploadFileName
-//    		          + "new"+".")
-//    		          + uploadFileSuffix);
     		 
     		   FileOutputStream fos = new FileOutputStream(new File(imageStore));
     		   byte[] temp = new byte[1024];

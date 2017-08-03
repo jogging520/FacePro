@@ -1,16 +1,12 @@
 package com.eyeai.service;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -20,16 +16,19 @@ import java.util.Random;
 
 import javax.net.ssl.SSLException;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONObject;
 
 @Service
 public class PostServiceImpl implements PostService {
-	
+
 	   private final static int CONNECT_TIME_OUT = 30000;
 	   private final static int READ_OUT_TIME = 50000;
 	   private static String boundaryString = getBoundary();
+
+	   private Logger logger = Logger.getLogger(getClass());
 
 	   @Override
 	   public String postImage(String URL, HashMap<String, String> map, HashMap<String, byte[]> fileMap)throws IOException {
@@ -100,7 +99,7 @@ public class PostServiceImpl implements PostService {
 	        ins.close();
 	        try{
 	            String str = new String(bytes);
-	            System.out.println(str);
+	            logger.info("接口返回的json是："+str);
 	            return str;
 	        }catch (Exception e) {
 	         e.printStackTrace();
@@ -201,7 +200,7 @@ public class PostServiceImpl implements PostService {
 			}
 	        try{
 	            String str = new String(bytes);
-	            System.out.println(str);
+	            logger.info("接口返回的json是："+str);
 	            return str;
 	        }catch (Exception e) {
 	         e.printStackTrace();

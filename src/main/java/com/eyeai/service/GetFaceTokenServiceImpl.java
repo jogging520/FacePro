@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -23,10 +24,9 @@ public class GetFaceTokenServiceImpl implements GetFaceTokenService {
 	@Value("${com.eyeai.detecturl}")
 	private String url;
 	
-	List<String> tokenlist = new ArrayList<String>();
+	private Logger logger=Logger.getLogger(getClass());
 	
-	//String urldetect = "https://api-cn.faceplusplus.com/facepp/v3/detect";
-	String response ="";
+    String response ="";
 	@Override
 	public List<String> getFaceTokenList(String imageStore) {
 		//1.上传比对文件，获取结果
@@ -39,17 +39,18 @@ public class GetFaceTokenServiceImpl implements GetFaceTokenService {
         byteMap.put("image_file", buff);
         try {
 			response =postService.postImage(url, map, byteMap);
+			logger.info("请求头像获取接口，获得头像返回："+response);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-       //2. 获取token list
-        List<String> tokenlist =new ArrayList<String>();
-        
+       //2. 获取token list    
+      //头像列表
+    	List<String> tokenlist = new ArrayList<String>();
  	    JSONObject faceDetecReturn=JSON.parseObject(response);
  	    //长传图片后，返回空值，或者错误
  	    if(faceDetecReturn==null||faceDetecReturn.containsKey("error_message")){
- 	    	 
+ 	    	logger.error("头像detect接口返回错误："+faceDetecReturn.toJSONString());
  	    	return tokenlist;
  	    }
  	    String faces=faceDetecReturn.getString("faces");
@@ -60,7 +61,7 @@ public class GetFaceTokenServiceImpl implements GetFaceTokenService {
 	        	tokenlist.add((String)list.get(i).get("face_token"));
 	        }
         }
-  System.out.println("tokenlist is "+tokenlist);
+        logger.info("获得头像列表"+tokenlist);
 		return tokenlist;
 	}
 
