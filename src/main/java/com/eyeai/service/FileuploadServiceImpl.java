@@ -19,30 +19,18 @@ public class FileuploadServiceImpl implements FileuploadService {
     
 	@Override
 	public String upload(HttpServletRequest req, MultipartHttpServletRequest multiReq) throws IOException {
-//		// TODO Auto-generated method stub
-System.out.println("file"+multiReq);
-	    //String uploadFilePath = multiReq.getFile("file").getOriginalFilename();
-List<MultipartFile> files = ((MultipartHttpServletRequest) req).getFiles("file");
 
-	    System.out.println(files.size());	    
-//	   // 截取上传文件的文件名
-//	    String uploadFileName = getFilename(uploadFilePath);
-//	    // 截取上传文件的后缀
-//	    String uploadFileSuffix =getFileSuffix(uploadFilePath);
-//	    // 获取上传文件的输入流
-//	    FileInputStream fis = (FileInputStream)multiReq.getFile("file").getInputStream();
-	    MultipartFile file = null;
-	    file = files.get(0);
-		// 获取上传文件的路径
-	    String uploadFilePath = file.getOriginalFilename();
- System.out.println("filename "+uploadFilePath);
 
-	    // 截取上传文件的文件名
+	    String uploadFilePath = multiReq.getFile("file1").getOriginalFilename();
+    
+	   // 截取上传文件的文件名
 	    String uploadFileName = getFilename(uploadFilePath);
 	    // 截取上传文件的后缀
 	    String uploadFileSuffix =getFileSuffix(uploadFilePath);
 	    // 获取上传文件的输入流
-	    FileInputStream fis = (FileInputStream) file.getInputStream();
+	    FileInputStream fis = (FileInputStream)multiReq.getFile("file1").getInputStream();
+
+	 
 	    String imageStore ="E:/images/"+uploadFileName+"_eyeai."+uploadFileSuffix;
 	    //String imageStore ="/Users/qiwu/Downloads/image/"+uploadFileName+"_eyeai."+uploadFileSuffix;
 
