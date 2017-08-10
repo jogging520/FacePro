@@ -1,5 +1,6 @@
 package com.eyeai.dto;
 
+
 public class ErrorInfo<T> {
 
     public static final Integer OK = 0;

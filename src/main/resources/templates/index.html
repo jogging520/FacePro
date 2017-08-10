@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html >
 <head>
-     <title>图猫智识科技</title>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel='stylesheet prefetch' th:href="@{http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css}" />
-     <link rel="stylesheet" th:href="@{/css/style.css}" />
-</head>    
+  <meta charset="UTF-8"/>
+  <title>图猫智识科技</title>
+  <link rel='stylesheet prefetch' th:href="@{http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css}" />
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+  
+</head>  
 
 <body>
-<h1>欢迎使用图猫科技人证比对系统</h1>
-
-<p>点击 <a th:href="@{/upload}">这里</a> 上传人证比对图片（一张图片上传）</p>
-<p>点击 <a th:href="@{/uploadMuti}">这里</a> 上传（人、证）图片（两张图片上传）</p>
+    <div class="wrapper">
+    <h1>欢迎使用图猫科技人证比对系统</h1>
+    <p>点击 <a th:href="@{/upload}">这里</a> 上传人证比对图片（一张图片上传）</p>
+    <p>点击 <a th:href="@{/uploadMuti}">这里</a> 上传（人、证）图片（两张图片上传）</p>
+    </div>
 </body>
+
 </html>

@@ -28,5 +28,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/qiwu/Downloads/inxedu/demo_inxedu_open/使用教程/lombok.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

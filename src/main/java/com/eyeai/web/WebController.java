@@ -10,29 +10,29 @@ import io.swagger.annotations.ApiOperation;
 
 
 @Controller
-
 public class WebController {
-	@ApiOperation(value="测试", notes="根据helloworld")
-    @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long")
-    @RequestMapping("/hello")
+
+    @RequestMapping(value="/hello",method = RequestMethod.GET)
     public String hello() {
         return "hello";
     }
-
-    @RequestMapping("/")
+	@ApiOperation(value="图猫首页", notes="返回index页面")
+    @RequestMapping(value="/",method = RequestMethod.GET )
     public String index(ModelMap map) {
         return "index";
     }
-    
+	@ApiOperation(value="登录页面", notes="返回login页面")
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
         return "login";
     }
-    @RequestMapping(value = "/upload")
+	@ApiOperation(value="上传单个文件页面", notes="返回上传单个文件页面")
+    @RequestMapping(value = "/upload",method = RequestMethod.GET)
     public String upload() {
         return "upload";
     }
-    @RequestMapping(value = "/uploadMuti")
+	@ApiOperation(value="上传多个个文件页面", notes="返回上传多个文件页面")
+    @RequestMapping(value = "/uploadMuti",method = RequestMethod.GET)
     public String uploadMuti() {
         return "uploadMuti";
     }
