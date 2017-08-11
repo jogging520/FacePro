@@ -93,17 +93,17 @@ public class HttpPostUtils {
 
     }
 
-    public static void main(String[] args) throws IOException {
-    	JSONObject json = new JSONObject();
-    	String url ="https://api-cn.faceplusplus.com/facepp/v3/compare";
-        json.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
-        json.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
-    	json.put("face_token1", "256a83a1edc397adb384a27813c782df") ;
-    	json.put("face_token2", "34c99ce6459ded8a0594db878afc98de");
-
-        System.out.println(json.toJSONString());
-        sendPost(url,json);
-    }
+//    public static void main(String[] args) throws IOException {
+//    	JSONObject json = new JSONObject();
+//    	String url ="https://api-cn.faceplusplus.com/facepp/v3/compare";
+//        json.put("api_key", "EmwiWkkws71IqE1zQbdjkATEHgGlBeSq");
+//        json.put("api_secret", "p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3");
+//    	json.put("face_token1", "256a83a1edc397adb384a27813c782df") ;
+//    	json.put("face_token2", "34c99ce6459ded8a0594db878afc98de");
+//
+//        System.out.println(json.toJSONString());
+//        sendPost(url,json);
+//    }
     
     public static String  sendPost(String URL,JSONObject json)throws IOException{
     	HttpURLConnection conne;

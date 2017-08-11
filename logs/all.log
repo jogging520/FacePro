@@ -1840,3 +1840,344 @@ Caused by: java.io.FileNotFoundException: class path resource [org/springframewo
 2017-08-10 14:27:54,729  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
 2017-08-10 14:29:11,458  INFO AnnotationConfigEmbeddedWebApplicationContext:960 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb51256: startup date [Thu Aug 10 14:27:35 CST 2017]; root of context hierarchy
 2017-08-10 14:29:11,467  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-08-10 16:40:44,492  INFO Application:48 - Starting Application on wqwjdeMacBook-Air.local with PID 1835 (/Users/qiwu/git/FacePro/target/classes started by qiwu in /Users/qiwu/git/FacePro)
+2017-08-10 16:40:44,497  INFO Application:666 - No active profile set, falling back to default profiles: default
+2017-08-10 16:40:44,507  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2017-08-10 16:40:44,812  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb51256: startup date [Thu Aug 10 16:40:44 CST 2017]; root of context hierarchy
+2017-08-10 16:40:47,291  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2017-08-10 16:40:47,307  INFO StandardService:180 - Starting service Tomcat
+2017-08-10 16:40:47,309  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-08-10 16:40:47,479  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2017-08-10 16:40:47,479  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 2673 ms
+2017-08-10 16:40:47,936  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 16:40:47,937  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 16:40:47,938  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 16:40:47,938  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 16:40:47,940  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-10 16:40:47,941  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 16:40:48,427  INFO DefaultSecurityFilterChain:28 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38cea62f, org.springframework.security.web.context.SecurityContextPersistenceFilter@956d8a5, org.springframework.security.web.header.HeaderWriterFilter@33546d6c, org.springframework.security.web.authentication.logout.LogoutFilter@3579db20, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@402030b9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@498f6868, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f5ea68d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4771ca56, org.springframework.security.web.session.SessionManagementFilter@1aff0c45, org.springframework.security.web.access.ExceptionTranslationFilter@6395bd93, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@fe92079]
+2017-08-10 16:40:49,214  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFace],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFile(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-10 16:40:49,217  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFacejson],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFilejson(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-10 16:40:49,221  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareutiFaces],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFiles(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-10 16:40:49,222  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareutiFacesjson],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFilesjson(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-10 16:40:49,223  INFO RequestMappingHandlerMapping:527 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.index(org.springframework.ui.ModelMap)
+2017-08-10 16:40:49,224  INFO RequestMappingHandlerMapping:527 - Mapped "{[/hello],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.hello()
+2017-08-10 16:40:49,224  INFO RequestMappingHandlerMapping:527 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.login()
+2017-08-10 16:40:49,225  INFO RequestMappingHandlerMapping:527 - Mapped "{[/uploadMuti],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.uploadMuti()
+2017-08-10 16:40:49,226  INFO RequestMappingHandlerMapping:527 - Mapped "{[/upload],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.upload()
+2017-08-10 16:40:49,228  INFO RequestMappingHandlerMapping:527 - Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2017-08-10 16:40:49,232  INFO RequestMappingHandlerMapping:527 - Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-08-10 16:40:49,233  INFO RequestMappingHandlerMapping:527 - Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-08-10 16:40:49,234  INFO RequestMappingHandlerMapping:527 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-08-10 16:40:49,242  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 16:40:49,243  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 16:40:49,638  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb51256: startup date [Thu Aug 10 16:40:44 CST 2017]; root of context hierarchy
+2017-08-10 16:40:49,707  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 16:40:49,708  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 16:40:49,737  INFO ExceptionHandlerExceptionResolver:267 - Detected @ExceptionHandler methods in globalExceptionHandler
+2017-08-10 16:40:49,763  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 16:40:50,403  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-08-10 16:40:50,426  INFO DocumentationPluginsBootstrapper:80 - Context refreshed
+2017-08-10 16:40:50,454  INFO DocumentationPluginsBootstrapper:83 - Found {0} custom documentation plugin(s)
+2017-08-10 16:40:50,468  INFO ApiListingReferenceScanner:53 - Scanning for api listing references
+2017-08-10 16:40:50,474  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFile was compare-controller
+2017-08-10 16:40:50,477  INFO ApiListingReferenceScanner:72 - Request mapping: oneUploadFile belongs to groups: [[ResourceGroup{groupName='compare-controller', position=0, controller=com.eyeai.web.CompareController}]] 
+2017-08-10 16:40:50,480  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFilejson was compare-controller
+2017-08-10 16:40:50,482  INFO ApiListingReferenceScanner:72 - Request mapping: oneUploadFilejson belongs to groups: [[ResourceGroup{groupName='compare-controller', position=0, controller=com.eyeai.web.CompareController}]] 
+2017-08-10 16:40:50,484  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFiles was compare-controller
+2017-08-10 16:40:50,485  INFO ApiListingReferenceScanner:72 - Request mapping: mutUploadFiles belongs to groups: [[ResourceGroup{groupName='compare-controller', position=0, controller=com.eyeai.web.CompareController}]] 
+2017-08-10 16:40:50,485  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFilesjson was compare-controller
+2017-08-10 16:40:50,486  INFO ApiListingReferenceScanner:72 - Request mapping: mutUploadFilesjson belongs to groups: [[ResourceGroup{groupName='compare-controller', position=0, controller=com.eyeai.web.CompareController}]] 
+2017-08-10 16:40:50,487  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method index was web-controller
+2017-08-10 16:40:50,488  INFO ApiListingReferenceScanner:72 - Request mapping: index belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 16:40:50,489  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method hello was web-controller
+2017-08-10 16:40:50,490  INFO ApiListingReferenceScanner:72 - Request mapping: hello belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 16:40:50,490  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method login was web-controller
+2017-08-10 16:40:50,491  INFO ApiListingReferenceScanner:72 - Request mapping: login belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 16:40:50,492  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method uploadMuti was web-controller
+2017-08-10 16:40:50,492  INFO ApiListingReferenceScanner:72 - Request mapping: uploadMuti belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 16:40:50,493  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method upload was web-controller
+2017-08-10 16:40:50,493  INFO ApiListingReferenceScanner:72 - Request mapping: upload belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 16:40:50,498  INFO ApiListingReferenceScanner:84 - Created resource listing Path: /default/web-controller Description: web-controller Position: 0
+2017-08-10 16:40:50,499  INFO ApiListingReferenceScanner:84 - Created resource listing Path: /default/compare-controller Description: compare-controller Position: 0
+2017-08-10 16:40:50,531  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,532  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,538  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,538  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,553  INFO OperationsKeyGenerator:51 - Cache key generated: /CompareutiFaces.com.eyeai.web.CompareController.mutUploadFiles.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,554  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /CompareutiFaces.com.eyeai.web.CompareController.mutUploadFiles.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,578  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFiles was compare-controller
+2017-08-10 16:40:50,608  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFiles was compare-controller
+2017-08-10 16:40:50,626  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,627  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,629  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,629  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,629  INFO OperationsKeyGenerator:51 - Cache key generated: /CompareutiFacesjson.com.eyeai.web.CompareController.mutUploadFilesjson.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,630  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /CompareutiFacesjson.com.eyeai.web.CompareController.mutUploadFilesjson.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,632  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFilesjson was compare-controller
+2017-08-10 16:40:50,636  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFilesjson was compare-controller
+2017-08-10 16:40:50,638  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,639  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,640  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,641  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,641  INFO OperationsKeyGenerator:51 - Cache key generated: /CompareFace.com.eyeai.web.CompareController.oneUploadFile.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,641  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /CompareFace.com.eyeai.web.CompareController.oneUploadFile.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,645  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFile was compare-controller
+2017-08-10 16:40:50,653  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFile was compare-controller
+2017-08-10 16:40:50,659  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,659  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,660  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,660  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,661  INFO OperationsKeyGenerator:51 - Cache key generated: /CompareFacejson.com.eyeai.web.CompareController.oneUploadFilejson.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,661  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /CompareFacejson.com.eyeai.web.CompareController.oneUploadFilejson.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,664  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFilejson was compare-controller
+2017-08-10 16:40:50,669  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFilejson was compare-controller
+2017-08-10 16:40:50,677  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,677  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,678  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,678  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,679  INFO OperationsKeyGenerator:51 - Cache key generated: /hello.com.eyeai.web.WebController.hello.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,679  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /hello.com.eyeai.web.WebController.hello.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,681  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method hello was web-controller
+2017-08-10 16:40:50,682  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method hello was web-controller
+2017-08-10 16:40:50,693  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,693  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,694  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,695  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,696  INFO OperationsKeyGenerator:51 - Cache key generated: /.com.eyeai.web.WebController.index.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,697  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /.com.eyeai.web.WebController.index.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,699  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method index was web-controller
+2017-08-10 16:40:50,701  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method index was web-controller
+2017-08-10 16:40:50,703  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,703  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,704  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,704  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,705  INFO OperationsKeyGenerator:51 - Cache key generated: /login.com.eyeai.web.WebController.login.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,705  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /login.com.eyeai.web.WebController.login.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,707  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method login was web-controller
+2017-08-10 16:40:50,711  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method login was web-controller
+2017-08-10 16:40:50,713  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,713  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,714  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,715  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,716  INFO OperationsKeyGenerator:51 - Cache key generated: /upload.com.eyeai.web.WebController.upload.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,716  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /upload.com.eyeai.web.WebController.upload.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,717  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method upload was web-controller
+2017-08-10 16:40:50,720  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method upload was web-controller
+2017-08-10 16:40:50,722  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,724  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 16:40:50,725  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 16:40:50,726  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 16:40:50,728  INFO OperationsKeyGenerator:51 - Cache key generated: /uploadMuti.com.eyeai.web.WebController.uploadMuti.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,728  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /uploadMuti.com.eyeai.web.WebController.uploadMuti.DefaultGenericTypeNamingStrategy
+2017-08-10 16:40:50,729  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method uploadMuti was web-controller
+2017-08-10 16:40:50,732  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method uploadMuti was web-controller
+2017-08-10 16:40:50,772  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"]
+2017-08-10 16:40:50,780  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"]
+2017-08-10 16:40:50,800  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2017-08-10 16:40:50,814  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8080 (http)
+2017-08-10 16:40:50,819  INFO Application:57 - Started Application in 7.365 seconds (JVM running for 8.026)
+2017-08-10 16:42:28,697  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 16:42:28,697  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 16:42:28,719  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2017-08-10 16:42:28,799  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-08-10 16:42:28,870  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.TemplateResolver
+2017-08-10 16:42:28,870  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-08-10 16:42:28,871  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-08-10 16:42:28,872  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-08-10 16:42:28,879  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.TemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-08-10 16:42:28,879  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2017-08-10 16:42:45,731  INFO FileuploadServiceImpl:44 - 上传文件成功！
+2017-08-10 16:42:45,732  INFO FaceCompareImpl:44 - 上传照片的存储路径为：/Users/qiwu/Downloads/image/2317759269_eyeai.jpg
+2017-08-10 16:43:24,996  INFO PostServiceImpl:102 - 接口返回的json是：{"image_id": "5hAVuaxBQoEGZsGRFMNtYw==", "request_id": "1502354605,f7b6d731-9b28-430c-9847-932450958f2a", "time_used": 334, "faces": [{"face_rectangle": {"width": 285, "top": 278, "left": 492, "height": 285}, "face_token": "b5af4985bb8f59c9aa0340fea0135d79"}, {"face_rectangle": {"width": 115, "top": 880, "left": 680, "height": 115}, "face_token": "e123e6406c1802568de3b4e0ab8ea5fd"}]}
+2017-08-10 16:43:24,996  INFO GetFaceTokenServiceImpl:42 - 请求头像获取接口，获得头像返回：{"image_id": "5hAVuaxBQoEGZsGRFMNtYw==", "request_id": "1502354605,f7b6d731-9b28-430c-9847-932450958f2a", "time_used": 334, "faces": [{"face_rectangle": {"width": 285, "top": 278, "left": 492, "height": 285}, "face_token": "b5af4985bb8f59c9aa0340fea0135d79"}, {"face_rectangle": {"width": 115, "top": 880, "left": 680, "height": 115}, "face_token": "e123e6406c1802568de3b4e0ab8ea5fd"}]}
+2017-08-10 16:43:25,102  INFO GetFaceTokenServiceImpl:64 - 获得头像列表[b5af4985bb8f59c9aa0340fea0135d79, e123e6406c1802568de3b4e0ab8ea5fd]
+2017-08-10 16:43:25,103  INFO FaceCompareImpl:56 - 获取image头像列表[b5af4985bb8f59c9aa0340fea0135d79, e123e6406c1802568de3b4e0ab8ea5fd]
+2017-08-10 16:43:25,103  INFO FaceCompareImpl:76 - 发起比对请求:{"api_key":"EmwiWkkws71IqE1zQbdjkATEHgGlBeSq","face_token2":"e123e6406c1802568de3b4e0ab8ea5fd","face_token1":"b5af4985bb8f59c9aa0340fea0135d79","api_secret":"p0kdAQ8heNM5_sM7H0_0Gex4ZV6exHO3"}
+2017-08-10 16:43:25,519  INFO PostServiceImpl:203 - 接口返回的json是：{"error_message":"CONCURRENCY_LIMIT_EXCEEDED"}
+
+2017-08-10 16:43:41,065  INFO AnnotationConfigEmbeddedWebApplicationContext:960 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb51256: startup date [Thu Aug 10 16:40:44 CST 2017]; root of context hierarchy
+2017-08-10 16:43:41,071  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-08-10 19:16:11,568  INFO Application:48 - Starting Application on wqwjdeMacBook-Air.local with PID 2411 (/Users/qiwu/git/FacePro/target/classes started by qiwu in /Users/qiwu/git/FacePro)
+2017-08-10 19:16:11,572  INFO Application:666 - No active profile set, falling back to default profiles: default
+2017-08-10 19:16:11,900  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb51256: startup date [Thu Aug 10 19:16:11 CST 2017]; root of context hierarchy
+2017-08-10 19:16:12,310  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2017-08-10 19:16:14,848  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2017-08-10 19:16:14,870  INFO StandardService:180 - Starting service Tomcat
+2017-08-10 19:16:14,872  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-08-10 19:16:15,049  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2017-08-10 19:16:15,050  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 3155 ms
+2017-08-10 19:16:15,560  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 19:16:15,560  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 19:16:15,561  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 19:16:15,561  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 19:16:15,563  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-10 19:16:15,564  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 19:16:16,127  INFO DefaultSecurityFilterChain:28 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d8872f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@3bd7e373, org.springframework.security.web.header.HeaderWriterFilter@94c985d, org.springframework.security.web.authentication.logout.LogoutFilter@5b64be52, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@187bea80, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@247a2d5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a0d4951, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3781e931, org.springframework.security.web.session.SessionManagementFilter@71a71c10, org.springframework.security.web.access.ExceptionTranslationFilter@2b61ac00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cb7decb]
+2017-08-10 19:16:17,194  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFace],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFile(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-10 19:16:17,196  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareFacejson],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.oneUploadFilejson(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartHttpServletRequest) throws java.io.IOException
+2017-08-10 19:16:17,197  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareutiFaces],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFiles(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-10 19:16:17,197  INFO RequestMappingHandlerMapping:527 - Mapped "{[/CompareutiFacesjson],methods=[POST]}" onto public java.lang.String com.eyeai.web.CompareController.mutUploadFilesjson(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-08-10 19:16:17,200  INFO RequestMappingHandlerMapping:527 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.index(org.springframework.ui.ModelMap)
+2017-08-10 19:16:17,200  INFO RequestMappingHandlerMapping:527 - Mapped "{[/upload],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.upload()
+2017-08-10 19:16:17,202  INFO RequestMappingHandlerMapping:527 - Mapped "{[/hello],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.hello()
+2017-08-10 19:16:17,203  INFO RequestMappingHandlerMapping:527 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.login()
+2017-08-10 19:16:17,204  INFO RequestMappingHandlerMapping:527 - Mapped "{[/uploadMuti],methods=[GET]}" onto public java.lang.String com.eyeai.web.WebController.uploadMuti()
+2017-08-10 19:16:17,207  INFO RequestMappingHandlerMapping:527 - Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2017-08-10 19:16:17,211  INFO RequestMappingHandlerMapping:527 - Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-08-10 19:16:17,213  INFO RequestMappingHandlerMapping:527 - Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-08-10 19:16:17,214  INFO RequestMappingHandlerMapping:527 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-08-10 19:16:17,220  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 19:16:17,221  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 19:16:17,695  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb51256: startup date [Thu Aug 10 19:16:11 CST 2017]; root of context hierarchy
+2017-08-10 19:16:17,779  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 19:16:17,779  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 19:16:17,806  INFO ExceptionHandlerExceptionResolver:267 - Detected @ExceptionHandler methods in globalExceptionHandler
+2017-08-10 19:16:17,833  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 19:16:18,587  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-08-10 19:16:18,601  INFO DocumentationPluginsBootstrapper:80 - Context refreshed
+2017-08-10 19:16:18,688  INFO DocumentationPluginsBootstrapper:83 - Found {0} custom documentation plugin(s)
+2017-08-10 19:16:18,700  INFO ApiListingReferenceScanner:53 - Scanning for api listing references
+2017-08-10 19:16:18,709  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFile was compare-controller
+2017-08-10 19:16:18,714  INFO ApiListingReferenceScanner:72 - Request mapping: oneUploadFile belongs to groups: [[ResourceGroup{groupName='compare-controller', position=0, controller=com.eyeai.web.CompareController}]] 
+2017-08-10 19:16:18,721  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFilejson was compare-controller
+2017-08-10 19:16:18,721  INFO ApiListingReferenceScanner:72 - Request mapping: oneUploadFilejson belongs to groups: [[ResourceGroup{groupName='compare-controller', position=0, controller=com.eyeai.web.CompareController}]] 
+2017-08-10 19:16:18,722  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFiles was compare-controller
+2017-08-10 19:16:18,723  INFO ApiListingReferenceScanner:72 - Request mapping: mutUploadFiles belongs to groups: [[ResourceGroup{groupName='compare-controller', position=0, controller=com.eyeai.web.CompareController}]] 
+2017-08-10 19:16:18,723  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFilesjson was compare-controller
+2017-08-10 19:16:18,724  INFO ApiListingReferenceScanner:72 - Request mapping: mutUploadFilesjson belongs to groups: [[ResourceGroup{groupName='compare-controller', position=0, controller=com.eyeai.web.CompareController}]] 
+2017-08-10 19:16:18,724  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method index was web-controller
+2017-08-10 19:16:18,725  INFO ApiListingReferenceScanner:72 - Request mapping: index belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 19:16:18,726  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method hello was web-controller
+2017-08-10 19:16:18,726  INFO ApiListingReferenceScanner:72 - Request mapping: hello belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 19:16:18,727  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method login was web-controller
+2017-08-10 19:16:18,728  INFO ApiListingReferenceScanner:72 - Request mapping: login belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 19:16:18,729  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method uploadMuti was web-controller
+2017-08-10 19:16:18,730  INFO ApiListingReferenceScanner:72 - Request mapping: uploadMuti belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 19:16:18,731  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method upload was web-controller
+2017-08-10 19:16:18,732  INFO ApiListingReferenceScanner:72 - Request mapping: upload belongs to groups: [[ResourceGroup{groupName='web-controller', position=0, controller=com.eyeai.web.WebController}]] 
+2017-08-10 19:16:18,736  INFO ApiListingReferenceScanner:84 - Created resource listing Path: /default/web-controller Description: web-controller Position: 0
+2017-08-10 19:16:18,738  INFO ApiListingReferenceScanner:84 - Created resource listing Path: /default/compare-controller Description: compare-controller Position: 0
+2017-08-10 19:16:18,772  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,772  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:18,778  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,779  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:18,793  INFO OperationsKeyGenerator:51 - Cache key generated: /CompareutiFaces.com.eyeai.web.CompareController.mutUploadFiles.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,794  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /CompareutiFaces.com.eyeai.web.CompareController.mutUploadFiles.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,827  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFiles was compare-controller
+2017-08-10 19:16:18,879  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFiles was compare-controller
+2017-08-10 19:16:18,895  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,896  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:18,898  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,898  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:18,899  INFO OperationsKeyGenerator:51 - Cache key generated: /CompareutiFacesjson.com.eyeai.web.CompareController.mutUploadFilesjson.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,899  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /CompareutiFacesjson.com.eyeai.web.CompareController.mutUploadFilesjson.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,905  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFilesjson was compare-controller
+2017-08-10 19:16:18,910  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method mutUploadFilesjson was compare-controller
+2017-08-10 19:16:18,914  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,915  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:18,915  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,916  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:18,916  INFO OperationsKeyGenerator:51 - Cache key generated: /CompareFace.com.eyeai.web.CompareController.oneUploadFile.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,917  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /CompareFace.com.eyeai.web.CompareController.oneUploadFile.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,921  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFile was compare-controller
+2017-08-10 19:16:18,936  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFile was compare-controller
+2017-08-10 19:16:18,937  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,938  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:18,938  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,938  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:18,939  INFO OperationsKeyGenerator:51 - Cache key generated: /CompareFacejson.com.eyeai.web.CompareController.oneUploadFilejson.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,939  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /CompareFacejson.com.eyeai.web.CompareController.oneUploadFilejson.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,941  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFilejson was compare-controller
+2017-08-10 19:16:18,944  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method oneUploadFilejson was compare-controller
+2017-08-10 19:16:18,955  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,956  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:18,956  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,957  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:18,957  INFO OperationsKeyGenerator:51 - Cache key generated: /hello.com.eyeai.web.WebController.hello.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,958  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /hello.com.eyeai.web.WebController.hello.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,959  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method hello was web-controller
+2017-08-10 19:16:18,961  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method hello was web-controller
+2017-08-10 19:16:18,964  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,964  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:18,965  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,965  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:18,966  INFO OperationsKeyGenerator:51 - Cache key generated: /.com.eyeai.web.WebController.index.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,967  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /.com.eyeai.web.WebController.index.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,968  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method index was web-controller
+2017-08-10 19:16:18,975  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method index was web-controller
+2017-08-10 19:16:18,985  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,986  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:18,989  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:18,989  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:18,990  INFO OperationsKeyGenerator:51 - Cache key generated: /login.com.eyeai.web.WebController.login.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,990  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /login.com.eyeai.web.WebController.login.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:18,991  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method login was web-controller
+2017-08-10 19:16:19,001  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method login was web-controller
+2017-08-10 19:16:19,003  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:19,004  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:19,005  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:19,006  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:19,006  INFO OperationsKeyGenerator:51 - Cache key generated: /upload.com.eyeai.web.WebController.upload.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:19,007  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /upload.com.eyeai.web.WebController.upload.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:19,008  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method upload was web-controller
+2017-08-10 19:16:19,014  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method upload was web-controller
+2017-08-10 19:16:19,017  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:19,019  INFO CachingAspect:79 - Caching aspect applied for cache models with key java.lang.String(true)
+2017-08-10 19:16:19,020  INFO ModelContextKeyGenerator:46 - Cache Key Generated: java.lang.String(true)
+2017-08-10 19:16:19,021  INFO CachingAspect:79 - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-08-10 19:16:19,022  INFO OperationsKeyGenerator:51 - Cache key generated: /uploadMuti.com.eyeai.web.WebController.uploadMuti.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:19,022  INFO CachingAspect:68 - Caching aspect applied for cache operations with key /uploadMuti.com.eyeai.web.WebController.uploadMuti.DefaultGenericTypeNamingStrategy
+2017-08-10 19:16:19,024  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method uploadMuti was web-controller
+2017-08-10 19:16:19,027  INFO ClassOrApiAnnotationResourceGrouping:100 - Group for method uploadMuti was web-controller
+2017-08-10 19:16:19,102  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"]
+2017-08-10 19:16:19,114  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"]
+2017-08-10 19:16:19,185  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2017-08-10 19:16:19,204  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8080 (http)
+2017-08-10 19:16:19,214  INFO Application:57 - Started Application in 8.341 seconds (JVM running for 8.949)
+2017-08-10 19:16:26,542  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 19:16:26,542  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 19:16:26,557  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2017-08-10 19:16:26,628  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-08-10 19:16:26,672  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.TemplateResolver
+2017-08-10 19:16:26,672  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-08-10 19:16:26,673  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-08-10 19:16:26,674  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-08-10 19:16:26,680  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.TemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-08-10 19:16:26,680  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2017-08-10 19:16:46,214  INFO AnnotationConfigEmbeddedWebApplicationContext:960 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb51256: startup date [Thu Aug 10 19:16:11 CST 2017]; root of context hierarchy
+2017-08-10 19:16:46,219  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
